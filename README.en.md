@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://cdn.jsdelivr.net/gh/Jan-Jianhao-Liu/Jan-Jianhao-Liu.github.io/assets/waifu_agenteval_banner_v2.jpg" width="100%" alt="AgentEval · 黑盒边界测试的观测审判者" />
+  <img src="https://testingcf.jsdelivr.net/gh/Jan-Jianhao-Liu/Jan-Jianhao-Liu.github.io/assets/waifu_agenteval_banner_v2.jpg" width="100%" alt="AgentEval · 黑盒边界测试的观测审判者" />
 </p>
 
 ---
