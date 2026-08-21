@@ -1,5 +1,7 @@
 # AgentEval 复现工程（Independent Re-implementation）
 
+> **English**: [README.en.md](README.en.md)
+>
 > **Independent re-implementation of "Mining Workflow Graphs for Black-Box Boundary Testing of Conversational LLM Agents"**（独立复现，方法思想归原作者）。
 >
 > 本仓库是论文方法的**独立复现与实验验证**，非官方代码。所有模块均为自研实现，被测环境集成开源 [τ³-bench (tau2-bench)](https://github.com/sierra-research/tau2-bench)。
