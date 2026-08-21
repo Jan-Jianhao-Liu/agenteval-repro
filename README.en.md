@@ -1,3 +1,9 @@
+<p align="center">
+  <img src="https://cdn.jsdelivr.net/gh/Jan-Jianhao-Liu/Jan-Jianhao-Liu.github.io/assets/waifu_agenteval_banner.jpg" width="100%" alt="AgentEval · 黑盒边界测试的观测审判者" />
+</p>
+
+---
+
 # AgentEval Reproduction Project (Independent Re-implementation)
 
 > **Independent re-implementation of "Mining Workflow Graphs for Black-Box Boundary Testing of Conversational LLM Agents"** — all modules are self-implemented; the method belongs to the original authors.
