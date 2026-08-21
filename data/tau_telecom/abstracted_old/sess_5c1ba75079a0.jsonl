@@ -1,0 +1,21 @@
+{
+  "fingerprint": "20bb9c762ce8fa38",
+  "trace": {
+    "session_id": "sess_5c1ba75079a0",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "帮我查一下这个订单的流量超额费用，订单号是ABC-12345，日期是2023/02/30，航班号是CA1234。",
+        "agent_response": "您好！我这边是电信客服，可以帮您处理与手机账户相关的业务，比如流量超额费用、账单支付、套餐变更等。\n\n您提到的“订单号 ABC-12345”、“日期 2023/02/30”和“航班号 CA1234”看起来不是电信业务的查询信息。请问您是不是想查询手机号的**流量超额费用**呢？如果是的话，麻烦您提供一下您的**手机号码**，我来帮您核实账户信息。",
+        "user_action": "query_flow_overage_fee",
+        "agent_activity": "request_phone_number",
+        "semantic_key": "query_flow_overage_fee"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T18:02:30.570026Z",
+    "updated_at": "2026-08-19T18:02:30.570030Z",
+    "trace_id": null
+  }
+}

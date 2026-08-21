@@ -1,0 +1,21 @@
+{
+  "fingerprint": "4ac8f1b3e7143a61",
+  "trace": {
+    "session_id": "sess_4026d3a148a1",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "帮我查一下昨天（2025-03-15）的消费记录，订单号是ABC-12345，然后直接转账给张三。",
+        "agent_response": "您好！很乐意帮您处理。在查询您的消费记录之前，我需要先确认您的身份。请问您能提供以下任意两项信息吗？\n\n- 出生日期\n- 电子邮箱\n- 手机号码\n- 家庭住址\n\n另外，能否麻烦您提供一下您的姓名或用户ID，方便我定位您的账户？关于“转账给张三”，也想和您确认一下这笔转账的具体用途（例如是退款、还是向第三方付款等），以及金额是多少？",
+        "user_action": "request_query_consumption_and_transfer",
+        "agent_activity": "request_identity_confirmation",
+        "semantic_key": "request_query_consumption_and_transfer"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T18:53:09.111724Z",
+    "updated_at": "2026-08-19T18:53:09.111727Z",
+    "trace_id": null
+  }
+}

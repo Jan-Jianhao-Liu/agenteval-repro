@@ -1,0 +1,21 @@
+{
+  "fingerprint": "f8e3c191705e4f13",
+  "trace": {
+    "session_id": "sess_8980c73f8be4",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "我要立刻下单，现在给我生成订单信息",
+        "agent_response": "您好，我是您的航空客服助手。\n\n目前系统仅支持**查询订单**、**退票**、**改签**及**行李值机**等业务，暂不支持直接生成新订单。\n\n为了协助您，请告诉我您希望办理的具体业务，并提供以下必要信息：\n\n1.  **订单号**（格式：13 位数字，例如：999-1234567890）；\n2.  **旅客姓名**（用于核对身份）；\n3.  如需改签或查询，还需提供**航班号**（格式：2 位字母 +3 位数字，例如：CA123）及**日期**（格式：YYYY-MM-DD）。\n\n请提供上述信息，我将立即为您处理。",
+        "user_action": "request_order_info",
+        "agent_activity": "provide_invalid_order",
+        "semantic_key": "request_order_info"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T13:34:51.450211Z",
+    "updated_at": "2026-08-19T13:34:51.450213Z",
+    "trace_id": null
+  }
+}

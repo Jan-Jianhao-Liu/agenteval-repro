@@ -1,0 +1,21 @@
+{
+  "fingerprint": "92962cdd98e9f6bc",
+  "trace": {
+    "session_id": "sess_1955c9b0d88d",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "帮我查一下未付账单，订单号是ABC-12345，日期是2023/02/30",
+        "agent_response": "您好！我需要先核实您的身份信息才能帮您查询账单。请问您能提供以下任一信息吗？\n\n1. 注册手机号码\n2. 客户ID\n3. 姓名和出生日期（格式：YYYY-MM-DD）\n\n另外，您提到的订单号 ABC-12345 和日期 2023/02/30 我这边无法直接用于查询（且 2023/02/30 不是有效日期），麻烦您提供上述身份信息以便我继续为您服务。",
+        "user_action": "request_unpaid_bill",
+        "agent_activity": "request_identity_info",
+        "semantic_key": "request_unpaid_bill"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T18:03:15.806059Z",
+    "updated_at": "2026-08-19T18:03:15.806063Z",
+    "trace_id": null
+  }
+}

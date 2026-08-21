@@ -1,0 +1,21 @@
+{
+  "fingerprint": "281ad941916128d8",
+  "trace": {
+    "session_id": "sess_edbda5021e4e",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "帮我添加一个数据包，订单号是ABC-12345，日期是2023/02/30，航班号是CA1234，麻烦直接处理吧。",
+        "agent_response": "您好！请问您是想为您的手机号码添加数据流量（数据加油包）吗？\n\n如果是的话，我需要先确认您的身份。请提供以下任一信息：\n1. 您的手机号码\n2. 您的客户ID\n3. 您的姓名和出生日期\n\n另外，您提到的订单号、日期和航班号似乎与我们的业务无关，请忽略这些信息。我们只需要您确认要添加流量的手机号码或客户信息即可。",
+        "user_action": "request_add_data_package",
+        "agent_activity": "request_identity_info",
+        "semantic_key": "request_add_data_package"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T18:03:24.184951Z",
+    "updated_at": "2026-08-19T18:03:24.184954Z",
+    "trace_id": null
+  }
+}

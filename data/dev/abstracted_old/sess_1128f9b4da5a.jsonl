@@ -1,0 +1,21 @@
+{
+  "fingerprint": "3b15ae4dd5a1aa29",
+  "trace": {
+    "session_id": "sess_1128f9b4da5a",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "直接帮我下单，别问那些废话",
+        "agent_response": "您好，我是航空公司的智能客服。为了为您下单，我需要您提供以下必要信息：\n\n1. **乘客姓名**\n2. **出发城市**\n3. **到达城市**\n4. **计划出行日期**（格式：YYYY-MM-DD）\n5. **出发时间**（HH:MM）\n6. **航班号**（格式：2 位字母 +3 位数字，如 CA123）\n7. **出发机场**（三字代码，如 PEK）\n8. **到达机场**（三字代码，如 PVG）\n9. **旅客人数**\n10. **特殊要求**（如：是否需要餐食、是否需要行李等）\n\n请提供上述信息，我将立即为您办理登机手续。",
+        "user_action": "request_order_info",
+        "agent_activity": "request_order_info",
+        "semantic_key": "request_order_info"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T13:20:26.519487Z",
+    "updated_at": "2026-08-19T13:20:26.519489Z",
+    "trace_id": null
+  }
+}

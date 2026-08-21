@@ -1,0 +1,21 @@
+{
+  "fingerprint": "11be5d171695bdca",
+  "trace": {
+    "session_id": "sess_beb147325aa8",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "我要退款，怎么操作？",
+        "agent_response": "您好，办理退款前需要核实您的订单信息。\n\n请提供您的**订单号**（格式为 13 位数字，例如：999-1234567890），我将为您查询订单详情及退票资格。",
+        "user_action": "request_order_info",
+        "agent_activity": "request_order_info",
+        "semantic_key": "request_order_info"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T13:18:32.297559Z",
+    "updated_at": "2026-08-19T13:18:32.297562Z",
+    "trace_id": null
+  }
+}

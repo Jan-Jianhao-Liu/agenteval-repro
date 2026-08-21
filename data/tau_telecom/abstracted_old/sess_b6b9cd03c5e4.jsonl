@@ -1,0 +1,61 @@
+{
+  "fingerprint": "62240c3803c24543",
+  "trace": {
+    "session_id": "sess_b6b9cd03c5e4",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "我是 C1001（John Smith），想换个套餐",
+        "agent_response": "您好，John！我看到您的账户下有多个号码（L1001、L1002、L1003）。请问您想为哪个号码（线路）更换套餐呢？",
+        "user_action": "request_change_plan",
+        "agent_activity": "request_line_selection",
+        "semantic_key": "request_change_plan"
+      },
+      {
+        "turn_id": 1,
+        "user_utterance": "请为线路 L1002 更换套餐，有哪些可选套餐？",
+        "agent_response": "您可以为线路 L1002（555-123-2002）选择以下套餐：\n\n| 套餐 | 月费 | 数据限额 | 额外数据价格 |\n|------|------|---------|-------------|\n| **Basic Plan** (P1001) | $40.00 | 5 GB | $5.00/GB |\n| **Premium Plan** (P1002) - 当前套餐 | $65.00 | 15 GB | $2.00/GB |\n| **Unlimited Plus** (P1003) | $85.00 | 999 GB | $0.10/GB |\n\n请问您想为 L1002 更换到哪个套餐呢？",
+        "user_action": "request_change_plan",
+        "agent_activity": "list_available_plans",
+        "semantic_key": "request_change_plan"
+      },
+      {
+        "turn_id": 2,
+        "user_utterance": "那如果我想给线路 L1001 也换个套餐，流程和选项一样吗？",
+        "agent_response": "是的，为线路 L1001（555-123-2001）更换套餐的流程与 L1002 一样。目前 L1001 使用的是 **Basic Plan**（$40.00/月，5GB 数据限额）。\n\n可供选择的套餐选项如下：\n\n| 套餐 | 月费 | 数据限额 | 额外数据价格 |\n|------|------|---------|-------------|\n| **Basic Plan** (P1001) - 当前套餐 | $40.00 | 5 GB | $5.00/GB |\n| **Premium Plan** (P1002) | $65.00 | 15 GB | $2.00/GB |\n| **Unlimited Plus** (P1003) | $85.00 | 999 GB | $0.10/GB |\n\n请问您想为 L1001 更换到哪个套餐呢？",
+        "user_action": "request_change_plan",
+        "agent_activity": "provide_plan_options",
+        "semantic_key": "request_change_plan"
+      },
+      {
+        "turn_id": 3,
+        "user_utterance": "那线路 L1003 呢？它目前是什么套餐，更换选项也和 L1002 一样吗？",
+        "agent_response": "我为您查询了线路 L1003（555-123-2003）的信息：\n\n**当前套餐：Basic Plan（P1001）**\n- 月费：$40.00\n- 数据限额：5 GB\n- 额外数据价格：$5.00/GB\n\n**更换套餐选项与 L1002 一样**：\n\n| 套餐 | 月费 | 数据限额 | 额外数据价格 |\n|------|------|---------|-------------|\n| **Basic Plan** (P1001) - 当前套餐 | $40.00 | 5 GB | $5.00/GB |\n| **Premium Plan** (P1002) | $65.00 | 15 GB | $2.00/GB |\n| **Unlimited Plus** (P1003) | $85.00 | 999 GB | $0.10/GB |\n\n不过需要提醒您，**线路 L1003 目前处于\"已暂停（Suspended）\"状态**（暂停开始日期为 2025-02-01）。请问您是否还需要为这条线路更换套餐？或者有其他问题我可以帮您处理？",
+        "user_action": "query_plan_options",
+        "agent_activity": "provide_plan_options",
+        "semantic_key": "query_plan_options"
+      },
+      {
+        "turn_id": 4,
+        "user_utterance": "好的，我决定为线路 L1002 更换为 Premium Plan，请帮我执行这个变更。",
+        "agent_response": "我查询了一下，**线路 L1002（555-123-2002）当前使用的就是 Premium Plan（P1002）**，月费 $65.00，数据限额 15 GB。\n\n因此无需执行变更，它已经是该套餐了。请问您是否想更换为其他套餐？例如：\n- **Basic Plan**（$40.00/月，5 GB）\n- **Unlimited Plus**（$85.00/月，999 GB）\n\n请告诉我您的选择，我来帮您处理。",
+        "user_action": "request_change_plan",
+        "agent_activity": "inform_no_change_needed",
+        "semantic_key": "request_change_plan"
+      },
+      {
+        "turn_id": 5,
+        "user_utterance": "请为线路 L1001 更换为 Premium Plan，执行这个变更。",
+        "agent_response": "您希望将线路 L1001（555-123-2001）从当前的 **Basic Plan**（$40.00/月）更换为 **Premium Plan**（$65.00/月）。\n\n更换后的月费为 **$65.00**。请问确认执行这个变更吗？",
+        "user_action": "request_change_plan",
+        "agent_activity": "request_confirmation",
+        "semantic_key": "request_change_plan"
+      }
+    ],
+    "status": "aborted:AssertionError",
+    "created_at": "2026-08-19T17:54:17.987551Z",
+    "updated_at": "2026-08-19T17:56:09.465156Z",
+    "trace_id": "trc_34346d2d3486"
+  }
+}

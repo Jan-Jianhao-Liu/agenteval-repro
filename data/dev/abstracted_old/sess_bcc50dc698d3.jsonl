@@ -1,0 +1,21 @@
+{
+  "fingerprint": "78e77c1bf339b79b",
+  "trace": {
+    "session_id": "sess_bcc50dc698d3",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "我买的特价票可以退，现在要申请退款。",
+        "agent_response": "您好！特价票通常为不可退票种，无法申请免费或付费退票。\n\n为了核实您的订单详情，请您先提供**订单号**（格式：13 位数字，如 999-1234567890）及**乘机人姓名**，以便我为您查询具体的票种和退票资格。",
+        "user_action": "request_refund_ticket",
+        "agent_activity": "request_order_info",
+        "semantic_key": "request_refund_ticket"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T13:35:16.843592Z",
+    "updated_at": "2026-08-19T13:35:16.843594Z",
+    "trace_id": null
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "fingerprint": "26d20c65a33a9755",
+  "trace": {
+    "session_id": "sess_13d227685991",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "帮我改一下明天的航班，订单号是ABC123，改成后天下午3点的。",
+        "agent_response": "您好，我是电信客服代理，只能帮助处理与电信服务相关的问题，例如技术故障、账单支付、线路暂停、套餐变更等。航班改签不在我的服务范围内，我无法为您处理。\n\n请问还有其他电信方面的问题我可以帮助您吗？",
+        "user_action": "request_change_flight",
+        "agent_activity": "reject_out_of_scope",
+        "semantic_key": "request_change_flight"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T18:02:55.071477Z",
+    "updated_at": "2026-08-19T18:02:55.071479Z",
+    "trace_id": null
+  }
+}

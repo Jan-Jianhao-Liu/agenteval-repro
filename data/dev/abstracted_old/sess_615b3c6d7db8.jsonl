@@ -1,0 +1,93 @@
+{
+  "fingerprint": "05815d1b4d705f11",
+  "trace": {
+    "session_id": "sess_615b3c6d7db8",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "帮我预订一张明天去北京的机票",
+        "agent_response": "您好，我是您的智能客服助手。\n\n预订机票需要您提供出发地、目的地及具体的出发日期（格式：YYYY-MM-DD）。\n\n请问您从哪个城市出发？",
+        "user_action": "request_reservation",
+        "agent_activity": "request_reservation_details",
+        "semantic_key": "request_reservation"
+      },
+      {
+        "turn_id": 1,
+        "user_utterance": "（针对刚才的话题）那退票的流程具体是怎样的？",
+        "agent_response": "您好，关于退票流程，具体步骤如下：\n\n1.  **身份核验**：您需要提供**订单号**（13 位数字）及**乘客姓名**，我将为您核对票种及剩余时间。\n2.  **资格判定**：系统会检查您的机票是否符合免费退票条件（起飞前 24 小时以上且非特价票）。\n    *   若符合免费条件，可直接办理；\n    *   若起飞前 24 小时内，将收取 50% 手续费；\n    *   若是特价票，则无法办理退票。\n3.  **二次确认**：若需退票，我将向您展示退票信息及退款方式，需您确认后方可执行。\n\n为了开始办理，请先提供您的**订单号**和**乘客姓名**。",
+        "user_action": "request_refund_ticket",
+        "agent_activity": "provide_alternative",
+        "semantic_key": "request_refund_ticket"
+      },
+      {
+        "turn_id": 2,
+        "user_utterance": "（针对刚才的话题）需要我提供什么信息？",
+        "agent_response": "您好，办理退票业务需要您提供以下信息：\n\n1.  **订单号**（13 位数字，例如：999-1234567890）；\n2.  **乘客姓名**（用于核对身份）。\n\n请提供上述信息，我将为您查询订单详情并判断是否符合退票条件。",
+        "user_action": "request_order_info",
+        "agent_activity": "request_order_info",
+        "semantic_key": "request_order_info"
+      },
+      {
+        "turn_id": 3,
+        "user_utterance": "（针对刚才的话题）还有其他注意事项吗？",
+        "agent_response": "您好，办理退票还有以下注意事项：\n\n1.  **起飞时间限制**：\n    *   **起飞前 24 小时以上**：若票种为“可退”，可免费退票；若为“特价票”，则不可退。\n    *   **起飞前 24 小时内**：无论票种如何，均会收取 50% 的手续费。\n2.  **退款方式**：\n    *   退款将原路返回至您的**原支付方式**或**账户余额**，具体方式需经您确认。\n3.  **二次确认**：\n    *   系统审核通过后，我会向您展示具体的退票金额和退款方式，需您**再次确认**后方可执行操作。\n\n请提供您的**订单号**和**乘客姓名**，我将为您查询具体航班时间以判断适用规则。",
+        "user_action": "request_refund_ticket",
+        "agent_activity": "provide_alternative",
+        "semantic_key": "request_refund_ticket"
+      },
+      {
+        "turn_id": 4,
+        "user_utterance": "（针对刚才的话题）那退票的流程具体是怎样的？",
+        "agent_response": "您好，办理退票的具体流程如下：\n\n1.  **信息提交**：您需提供**订单号**（13 位数字）及**乘客姓名**，我将查询您的票种及起飞时间。\n2.  **资格判定**：\n    *   若为**特价票**：无法退票。\n    *   若为**可退票**且起飞前**24 小时以上**：可全额免费退票。\n    *   若为**可退票**且起飞前**24 小时内**：将收取**50% 手续费**。\n3.  **二次确认**：系统判定符合条件后，我将告知具体的退票金额及**退款方式**（原支付账户或账户余额），需您确认后方可执行。\n\n请提供您的**订单号**和**乘客姓名**，我将为您查询具体情况。",
+        "user_action": "request_order_info",
+        "agent_activity": "provide_order_info",
+        "semantic_key": "request_order_info"
+      },
+      {
+        "turn_id": 5,
+        "user_utterance": "（针对刚才的话题）需要我提供什么信息？",
+        "agent_response": "您好，办理退票业务需要您提供以下信息：\n\n1.  **订单号**：格式为 13 位数字（例如：999-1234567890）；\n2.  **乘客姓名**：用于核对订单信息。\n\n请提供上述信息，我将为您查询具体的票种、起飞时间及适用规则。",
+        "user_action": "request_order_info",
+        "agent_activity": "request_order_info",
+        "semantic_key": "request_order_info"
+      },
+      {
+        "turn_id": 6,
+        "user_utterance": "（针对刚才的话题）还有其他注意事项吗？",
+        "agent_response": "您好，除了提供订单号及姓名外，办理退票还需注意以下事项：\n\n1.  **手续费规则**：\n    *   若航班**起飞前 24 小时以上**且票种可退，**免费**退票；\n    *   若航班**起飞前 24 小时内**退票，将收取**50% 手续费**；\n    *   **特价票**（不可退）一律无法办理退票。\n2.  **退款方式**：\n    *   退款将原路返回至您的**原支付账户**或**账户余额**，具体方式需经您**二次确认**。\n3.  **操作确认**：\n    *   执行退票前，我会向您展示退票详情及退款方式，需您**再次确认**后方可执行。\n\n请提供您的**订单号**和**乘客姓名**，我将为您查询具体航班时间以判断适用规则。",
+        "user_action": "request_refund_ticket",
+        "agent_activity": "check_refund_eligibility",
+        "semantic_key": "request_refund_ticket"
+      },
+      {
+        "turn_id": 7,
+        "user_utterance": "行李超重怎么收费？",
+        "agent_response": "您好，行李超重收费标准需根据**机票类型**（经济舱/公务舱等）及**航班政策**查询，不同航空公司和舱位标准不同。\n\n为了准确为您提供收费金额，请提供您的**订单号**（13 位数字）和**乘客姓名**，我将为您查询具体超重费用。",
+        "user_action": "request_order_info",
+        "agent_activity": "request_order_info",
+        "semantic_key": "request_order_info"
+      },
+      {
+        "turn_id": 8,
+        "user_utterance": "（针对刚才的话题）需要我提供什么信息？",
+        "agent_response": "您好，查询行李超重收费标准需要您提供以下信息：\n\n1.  **订单号**：格式为 13 位数字（例如：999-1234567890）；\n2.  **乘客姓名**：用于核对订单详情。\n\n请提供上述信息，我将为您查询具体的超重收费金额。",
+        "user_action": "request_order_info",
+        "agent_activity": "request_order_info",
+        "semantic_key": "request_order_info"
+      },
+      {
+        "turn_id": 9,
+        "user_utterance": "（针对刚才的话题）还有其他注意事项吗？",
+        "agent_response": "您好，办理行李超重收费业务还有以下重要注意事项：\n\n1.  **费用计算依据**：\n    *   超重费用通常按**每公斤 50 元**计算（具体标准可能因航线和舱位略有差异，以系统查询结果为准）。\n    *   超重费用将**额外累加**在总票款中，不影响您的退票资格判定。\n\n2.  **关联业务影响**：\n    *   若因超重导致无法登机，您可能需要办理**改签**，届时将涉及改签手续费及票价差，同样受「起飞前 24 小时」规则限制。\n\n3.  **订单信息需求**：\n    *   为查询您的具体超重金额，仍需提供**订单号**（13 位数字）及**乘客姓名**。\n\n请提供上述信息，我将为您查询具体的超重费用。",
+        "user_action": "request_order_info",
+        "agent_activity": "provide_order_info",
+        "semantic_key": "request_order_info"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T13:09:20.243638Z",
+    "updated_at": "2026-08-19T13:10:51.140196Z",
+    "trace_id": "trc_2f224c30301b"
+  }
+}

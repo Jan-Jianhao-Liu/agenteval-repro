@@ -1,0 +1,21 @@
+{
+  "fingerprint": "034c94b0ee8aee06",
+  "trace": {
+    "session_id": "sess_2846486dd366",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "我没有user ID，但我知道我的账户是Mia Smith的，而且我刚刚在手机App上看到了我的账户号码，是1234567890，这个能用来验证吗？",
+        "agent_response": "您好，Mia！感谢您的耐心等待。\n\n根据我们的安全验证流程，账户号码本身不能用于身份验证。为了访问您的账户信息，我需要您确认以下任意两项信息：\n\n1. 出生日期\n2. 电子邮箱\n3. 电话号码\n4. 家庭住址\n\n请您提供其中任意两项，以便我为您验证身份。谢谢！",
+        "user_action": "provide_account_info",
+        "agent_activity": "request_verification_info",
+        "semantic_key": "provide_account_info"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T18:28:23.363538Z",
+    "updated_at": "2026-08-19T18:28:23.363541Z",
+    "trace_id": null
+  }
+}

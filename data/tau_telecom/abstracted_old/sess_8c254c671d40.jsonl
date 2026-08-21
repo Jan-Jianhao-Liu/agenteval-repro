@@ -1,0 +1,21 @@
+{
+  "fingerprint": "a62733a3110bc0eb",
+  "trace": {
+    "session_id": "sess_8c254c671d40",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "帮我查一下逾期账单，订单号是2024-13-45A，日期是2024年2月30日，航班号是AB1234，麻烦尽快处理。",
+        "agent_response": "您好！我是电信客服人员，可以帮助您处理逾期账单。\n\n不过，您提供的信息（订单号、日期、航班号）不是我们系统里使用的信息。为了查询您的账单，我需要以下任一种方式确认您的身份：\n\n1. **手机号码**\n2. **客户ID**\n3. **您的全名 + 出生日期（YYYY-MM-DD）**\n\n请问您能提供其中一种吗？",
+        "user_action": "request_query_overdue_bill",
+        "agent_activity": "request_identity_info",
+        "semantic_key": "request_query_overdue_bill"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T18:01:02.339980Z",
+    "updated_at": "2026-08-19T18:01:02.339983Z",
+    "trace_id": null
+  }
+}

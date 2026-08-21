@@ -1,0 +1,21 @@
+{
+  "fingerprint": "68a59858c78af690",
+  "trace": {
+    "session_id": "sess_32e21d5d5f92",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "帮我查一下逾期账单，订单号是ABC-12345，日期是2023/02/30，然后直接发送付款请求吧。",
+        "agent_response": "您好！我需要先确认您的身份才能查询账单信息。请问您能提供以下任一信息吗？\n\n1. 手机号码\n2. 客户ID\n3. 您的全名和出生日期（格式：YYYY-MM-DD）\n\n另外，您提到的\"订单号 ABC-12345\"和日期\"2023/02/30\"我这边无法用于查询，请您提供上述客户信息以便我为您查找逾期账单。",
+        "user_action": "request_overdue_bill",
+        "agent_activity": "request_customer_identity",
+        "semantic_key": "request_overdue_bill"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T18:02:25.034683Z",
+    "updated_at": "2026-08-19T18:02:25.034686Z",
+    "trace_id": null
+  }
+}

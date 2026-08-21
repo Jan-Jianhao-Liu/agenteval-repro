@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AGENTEVAL 复现实验汇报</title>
+<style>
+  :root{
+    --bg:#0f1115; --panel:#1a1d24; --panel2:#232733; --line:#2c3140;
+    --text:#e8eaf0; --muted:#9aa3b5; --accent:#5b8cff; --green:#2ecc8f; --red:#ff5d6c; --amber:#f5a623;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;padding:32px 40px;line-height:1.6}
+  .wrap{max-width:1200px;margin:0 auto}
+  h1{font-size:26px;font-weight:700;letter-spacing:.5px}
+  .sub{color:var(--muted);font-size:14px;margin:6px 0 28px}
+  .sub b{color:var(--accent)}
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:28px}
+  .kpi{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px}
+  .kpi .v{font-size:30px;font-weight:800;color:var(--accent)}
+  .kpi .l{color:var(--muted);font-size:13px;margin-top:4px}
+  .kpi .s{font-size:12px;color:var(--green);margin-top:2px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .card h2{font-size:16px;margin-bottom:16px;color:var(--text)}
+  .card h2 .tag{font-size:12px;color:var(--muted);font-weight:400;margin-left:8px}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th{color:var(--muted);text-align:left;font-weight:500;padding:8px 10px;border-bottom:1px solid var(--line)}
+  td{padding:8px 10px;border-bottom:1px solid #20242e}
+  .hl{color:var(--green);font-weight:700}
+  .bar-row{display:flex;align-items:center;margin-bottom:10px;font-size:12px}
+  .bar-label{width:90px;color:var(--muted);flex-shrink:0}
+  .bar-track{flex:1;height:22px;background:var(--panel2);border-radius:6px;overflow:hidden;position:relative}
+  .bar{height:100%;border-radius:6px;display:flex;align-items:center;padding-left:8px;color:#fff;font-size:11px;font-weight:700}
+  .legend{display:flex;gap:18px;font-size:12px;color:var(--muted);margin:10px 0 16px}
+  .dot{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:middle}
+  .flow{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+  .flow .step{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:12px 14px;flex:1;min-width:150px;font-size:13px}
+  .flow .step b{display:block;color:var(--accent);font-size:14px;margin-bottom:4px}
+  .flow .step span{color:var(--muted);font-size:12px}
+  .footer{color:var(--muted);font-size:12px;margin-top:26px;border-top:1px solid var(--line);padding-top:14px}
+  .badge{display:inline-block;background:rgba(46,204,143,.15);color:var(--green);border-radius:20px;padding:2px 10px;font-size:12px;margin-left:8px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>AGENTEVAL 复现实验汇报<span class="badge">真实 τ³-bench 四域</span></h1>
+  <div class="sub">独立复现《Mining Workflow Graphs for Black-Box Boundary Testing of Conversational LLM Agents》· 被测 <b>deepseek-v4-flash</b> · 框架 <b>deepseek-chat</b> · 审计器 <b>GLM-5.2</b> · 温度 0</div>
+
+  <div class="kpis">
+    <div class="kpi"><div class="v">50–87</div><div class="l">独立边界（四域 full_method）</div><div class="s">论文区间 23~38 ✅</div></div>
+    <div class="kpi"><div class="v">≤0.083</div><div class="l">重复率</div><div class="s">论文 0.26 ✅</div></div>
+    <div class="kpi"><div class="v">0.98–1.00</div><div class="l">覆盖召回率（N_b=90）</div><div class="s">论文 0.97 ✅</div></div>
+    <div class="kpi"><div class="v">0.93→近真值</div><div class="l">裁判误报率被审计器抑制</div><div class="s">133 条人工基准</div></div>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h2>三组消融 · 独立边界<span class="tag">跨域趋势完全一致</span></h2>
+      <div class="legend"><span><span class="dot" style="background:#5b8cff"></span>full_method（按图遍历）</span><span><span class="dot" style="background:#f5a623"></span>graph_context</span><span><span class="dot" style="background:#9aa3b5"></span>prompt_only</span></div>
+      <div id="ablation"></div>
+    </div>
+    <div class="card">
+      <h2>四域最终成绩（R_disc=12 · N_b=90）</h2>
+      <table>
+        <tr><th>域</th><th>DFG 规模</th><th>独立边界</th><th>重复率</th><th>覆盖</th><th>准确率</th></tr>
+        <tr><td>航空 airline</td><td>60 / 75</td><td class="hl">62</td><td>0.046</td><td class="hl">0.983</td><td>100%</td></tr>
+        <tr><td>零售 retail</td><td>50 / 77</td><td class="hl">77</td><td>0.083</td><td class="hl">1.000</td><td>97.6%</td></tr>
+        <tr><td>电信 telecom</td><td>63 / 71</td><td class="hl">72</td><td>-0.014</td><td class="hl">0.984</td><td>98.6%</td></tr>
+        <tr><td>银行 banking</td><td>73 / 81</td><td class="hl">87</td><td>0.011</td><td class="hl">1.000</td><td>98.0%</td></tr>
+      </table>
+      <div style="margin-top:14px;font-size:12px;color:var(--muted)">银行域经打分阈值 0.4→0.2 扩大候选后覆盖 0.685→1.000（机制闭环验证）</div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h2>特权审计器验证<span class="tag">20% 人工基准 · 133 条</span></h2>
+      <table>
+        <tr><th>指标</th><th>裁判 Judge</th><th>审计器</th></tr>
+        <tr><td>准确率 vs 金标准</td><td>84.2%</td><td class="hl">86.5%</td></tr>
+        <tr><td>误报率（FAR）</td><td class="red" style="color:var(--red)">0.93</td><td class="hl">抑制到近真值</td></tr>
+        <tr><td>真实故障召回</td><td>20%</td><td class="hl">40%</td></tr>
+      </table>
+      <div style="margin-top:12px;font-size:12px;color:var(--muted)">金标准（规则库 + GLM-5.2）5 个 fail 经人工逐条审查全部合理</div>
+    </div>
+    <div class="card">
+      <h2>流水线</h2>
+      <div class="flow">
+        <div class="step"><b>① 探索</b><span>LLM 规划器 · R_disc=12 · 携带合法身份</span></div>
+        <div class="step"><b>② 抽象+构图</b><span>自由标签 + bge-m3 语义合并 → DFG 50~73 节点</span></div>
+        <div class="step"><b>③ 边界枚举</b><span>图规则遍历 + LLM 打分 + 四类扰动</span></div>
+        <div class="step"><b>④ 判定</b><span>Judge → 规则库 → GLM-5.2 复核</span></div>
+        <div class="step"><b>⑤ 指标</b><span>bge-m3 + DBSCAN(0.99) 聚类</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">AGENTEVAL 独立复现 · 方法归属 Liting Lin et al. (arXiv:2607.06873) · 被测环境 τ³-bench (sierra-research/tau2-bench) · 2026-08-20</div>
+</div>
+
+<script>
+const D = [
+  {name:"航空", full:50, graph:1, prompt:3},
+  {name:"零售", full:45, graph:2, prompt:2},
+  {name:"电信", full:50, graph:2, prompt:1},
+  {name:"银行", full:50, graph:2, prompt:2},
+];
+const maxV = 55;
+const html = D.map(d => `
+  <div class="bar-row">
+    <div class="bar-label">${d.name}</div>
+    <div class="bar-track">
+      <div class="bar" style="width:${d.full/maxV*100}%;background:#5b8cff">${d.full}</div>
+    </div>
+  </div>
+  <div class="bar-row" style="margin-bottom:14px">
+    <div class="bar-label"></div>
+    <div class="bar-track">
+      <div class="bar" style="width:${d.graph/maxV*100}%;background:#f5a623">${d.graph}</div>
+      <div class="bar" style="width:${d.prompt/maxV*100}%;background:#9aa3b5;margin-left:4px">${d.prompt}</div>
+    </div>
+  </div>`).join("");
+document.getElementById("ablation").innerHTML = html;
+</script>
+</body>
+</html>

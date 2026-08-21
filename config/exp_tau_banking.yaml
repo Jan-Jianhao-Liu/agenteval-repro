@@ -1,0 +1,76 @@
+# 真实实验环境：τ³-bench 银行知识域 + DeepSeek 真实大模型
+# banking_knowledge：知识检索域（RAG 文档检索 + 工具后端）
+env_name: exp_tau_banking
+exp_mode: full_method
+
+agent:
+  type: t3bench                # 真实 τ³-bench
+  domain: banking_knowledge
+  model: deepseek/deepseek-v4-flash
+  temperature: 0.0
+
+llm:
+  provider: openai_compat
+  model: deepseek-chat
+  base_url: https://api.deepseek.com
+  api_key: env:DEEPSEEK_API_KEY
+  temperature: 0.0
+  timeout_sec: 180
+  max_retries: 3
+  retry_backoff: [2, 5, 10]
+  circuit_fail_threshold: 5
+  circuit_cooldown_sec: 60
+  json_fix_retries: 2
+
+session:
+  total_rounds: 12
+  max_turns: 8
+  concurrency: 2
+  reset_on_error: true
+  explorer: llm
+  objectives:
+    - 我是用户 123（Mia Smith），想查一下我的账户余额
+    - 帮我查我的支票账户 01 的交易记录
+    - 我的信用卡账单怎么还？user_id 123
+    - 我要申请提高信用额度，user 123
+    - 帮我把钱转到我的储蓄账户，account 01
+    - 我的交易记录里有一笔可疑扣款，user 123
+    - 我要开一个新的储蓄账户，user 123
+    - 信用卡挂失怎么办理？user_id 123
+    - 我的定期存款到期了，怎么续存？user 123
+    - 国际转账手续费是多少？user 123
+    - 帮我查一下我的信用额度，user 123
+    - 我的账户被冻结了怎么办？account 01
+
+cache:
+  enabled: true
+  dir: data/cache
+
+storage:
+  data_dir: data/tau_banking
+  trace_dir: data/tau_banking/trace
+
+dbscan:
+  eps: 0.99
+  min_samples: 1
+
+test:
+  boundary_limit: 90
+  scorer_threshold: 0.2
+
+trace:
+  level: INFO
+  save_input_output: true
+
+auditor_llm:
+  provider: openai_compat
+  model: glm-5.2
+  base_url: https://open.bigmodel.cn/api/paas/v4
+  api_key: env:GLM_API_KEY
+  temperature: 0.0
+  timeout_sec: 180
+  max_retries: 3
+  retry_backoff: [2, 5, 10]
+  circuit_fail_threshold: 5
+  circuit_cooldown_sec: 60
+  json_fix_retries: 2

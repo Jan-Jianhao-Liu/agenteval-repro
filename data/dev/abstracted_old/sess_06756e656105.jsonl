@@ -1,0 +1,93 @@
+{
+  "fingerprint": "2873bc3e47185662",
+  "trace": {
+    "session_id": "sess_06756e656105",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "帮我办理在线值机",
+        "agent_response": "您好！请问您需要办理**在线值机**吗？\n\n为了帮您快速办理，请提供以下信息：\n1. **姓名**（用于核对身份）\n2. **预订订单号**（格式为 13 位数字，如 999-1234567890）\n\n请补充上述信息，我将立即为您处理。",
+        "user_action": "request_order_info",
+        "agent_activity": "request_order_info",
+        "semantic_key": "request_order_info"
+      },
+      {
+        "turn_id": 1,
+        "user_utterance": "（针对刚才的话题）那退票的流程具体是怎样的？",
+        "agent_response": "您好！退票流程如下：\n\n1. **身份校验**：请提供您的**预订订单号**（13 位数字，如 999-1234567890）及**姓名**，以便我核对您的订单信息。\n2. **资格判定**：系统将自动检查您的机票是否为“可退票种”以及当前距离起飞是否超过 24 小时。\n   - 若符合免费退票条件，无需手续费；\n   - 若起飞前 24 小时内申请，将收取 50% 手续费；\n   - 特价票（不可退）无法办理退票。\n3. **确认退款**：退票成功后，款项将原路返回您的支付账户或充入账户余额，请您确认接受该方式。\n\n请先提供您的**订单号**和**姓名**，我将为您查询具体资格。",
+        "user_action": "request_order_info",
+        "agent_activity": "provide_order_info",
+        "semantic_key": "request_order_info"
+      },
+      {
+        "turn_id": 2,
+        "user_utterance": "（针对刚才的话题）需要我提供什么信息？",
+        "agent_response": "您好！为了办理退票，您需要提供以下信息：\n\n1. **预订订单号**（格式为 13 位数字，例如 999-1234567890）；\n2. **姓名**（用于核对身份）。\n\n请补充上述信息，我将为您查询订单详情并判断退票资格。",
+        "user_action": "request_order_info",
+        "agent_activity": "request_order_info",
+        "semantic_key": "request_order_info"
+      },
+      {
+        "turn_id": 3,
+        "user_utterance": "（针对刚才的话题）还有其他注意事项吗？",
+        "agent_response": "您好！关于退票，还有以下**重要注意事项**：\n\n1. **起飞时间限制**：\n   - **起飞前 24 小时以上**：若票种允许，可**免费全额退票**。\n   - **起飞前 24 小时内**：即使票种允许，也将收取**50% 手续费**。\n   - **特价票（不可退）**：一律不可办理退票，无论时间早晚。\n\n2. **退款到账**：\n   - 退款将退至您的**原支付账户**或**账户余额**，具体方式需您在操作前确认。\n\n3. **二次确认**：\n   - 在系统执行退票操作前，我必须向您展示具体的**退票金额**和**退款方式**，经您确认后方可操作。\n\n**下一步操作**：\n为了帮您核实您的机票是否符合上述条件，请再次提供您的**姓名**和**13 位订单号**。",
+        "user_action": "request_refund_ticket",
+        "agent_activity": "check_refund_eligibility",
+        "semantic_key": "request_refund_ticket"
+      },
+      {
+        "turn_id": 4,
+        "user_utterance": "（针对刚才的话题）那退票的流程具体是怎样的？",
+        "agent_response": "您好！为了帮您办理退票，请提供以下信息：\n\n1. **姓名**（用于核对身份）\n2. **预订订单号**（格式为 13 位数字，如 999-1234567890）\n\n请补充上述信息，我将为您查询订单详情并判断退票资格。",
+        "user_action": "request_refund_ticket",
+        "agent_activity": "request_order_info",
+        "semantic_key": "request_refund_ticket"
+      },
+      {
+        "turn_id": 5,
+        "user_utterance": "（针对刚才的话题）需要我提供什么信息？",
+        "agent_response": "您好！为了帮您办理**退票**，根据业务规则，您需要提供以下信息：\n\n1. **姓名**（用于核对身份）\n2. **预订订单号**（格式为 13 位数字，例如 999-1234567890）\n\n请提供上述信息，我将为您查询订单详情并判断您的退票资格。",
+        "user_action": "request_identity_info",
+        "agent_activity": "request_order_info",
+        "semantic_key": "request_identity_info"
+      },
+      {
+        "turn_id": 6,
+        "user_utterance": "（针对刚才的话题）还有其他注意事项吗？",
+        "agent_response": "您好！关于退票业务，还有以下**关键注意事项**：\n\n1.  **退票资格限制**：\n    *   **免费退票**：仅限「起飞前 24 小时以上」且「票种为可退」的机票。\n    *   **手续费**：起飞前 24 小时内退票，将收取**50% 手续费**。\n    *   **不可退**：特价票（不可退票种）**一律不可退**。\n\n2.  **退款方式确认**：\n    *   款项将退至**原支付账户**或**账户余额**，具体方式需您在操作前**确认**。\n\n3.  **二次确认规则**：\n    *   在系统执行退票操作前，我必须向您展示具体的**退票金额**和**退款方式**，经您**确认无误**后方可办理。\n\n**下一步操作**：\n为了帮您核实您的机票是否符合上述条件，请提供您的**姓名**和**13 位订单号**（如 999-1234567890）。",
+        "user_action": "request_refund_ticket",
+        "agent_activity": "check_refund_eligibility",
+        "semantic_key": "request_refund_ticket"
+      },
+      {
+        "turn_id": 7,
+        "user_utterance": "我想了解一下你们的改签政策",
+        "agent_response": "您好！关于**改签政策**，请提供以下信息以便我为您查询具体规则：\n\n1.  **姓名**（用于核对身份）\n2.  **预订订单号**（格式为 13 位数字，如 999-1234567890）\n\n请补充上述信息，我将立即为您查询订单详情及改签资格。",
+        "user_action": "request_order_info",
+        "agent_activity": "request_order_info",
+        "semantic_key": "request_order_info"
+      },
+      {
+        "turn_id": 8,
+        "user_utterance": "（针对刚才的话题）需要我提供什么信息？",
+        "agent_response": "您好！关于**改签业务**，根据业务规则，您需要提供以下信息：\n\n1.  **姓名**（用于核对身份）\n2.  **预订订单号**（格式为 13 位数字，如 999-1234567890）\n\n请提供上述信息，我将为您查询订单详情并为您办理改签。",
+        "user_action": "request_identity_info",
+        "agent_activity": "request_order_info",
+        "semantic_key": "request_identity_info"
+      },
+      {
+        "turn_id": 9,
+        "user_utterance": "（针对刚才的话题）还有其他注意事项吗？",
+        "agent_response": "您好！关于**改签业务**，办理前请注意以下关键事项：\n\n1.  **身份与订单要求**：\n    *   必须先提供**姓名**和**13 位订单号**（如 999-1234567890）进行核验。\n    *   若订单号格式不合法，将无法查询。\n\n2.  **改签资格限制**：\n    *   **不可改签票种**：部分特价票（如“不可退改”票）一律**无法办理改签**。\n    *   **票价差额**：若新航班票价高于原票价，需**补足差额**；若低于原票价，**多退少补**。\n\n3.  **时间限制**：\n    *   改签通常需在**航班起飞前**办理，具体截止时间视票种而定。\n\n4.  **二次确认**：\n    *   执行改签前，系统将展示**新航班信息**及**费用变动详情**，经您**确认无误**后方可办理。\n\n**下一步操作**：\n请提供您的**姓名**和**13 位订单号**，我将为您查询具体的改签资格及费用详情。",
+        "user_action": "request_identity_info",
+        "agent_activity": "provide_alternative",
+        "semantic_key": "request_identity_info"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T13:10:46.560260Z",
+    "updated_at": "2026-08-19T13:12:34.834235Z",
+    "trace_id": "trc_c875bfe0ead2"
+  }
+}

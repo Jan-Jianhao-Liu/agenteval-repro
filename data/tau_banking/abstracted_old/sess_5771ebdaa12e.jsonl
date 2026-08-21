@@ -1,0 +1,21 @@
+{
+  "fingerprint": "ea1394bc7c5a1c91",
+  "trace": {
+    "session_id": "sess_5771ebdaa12e",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "我收到一条短信说我信用卡有可疑消费，但我没做过这笔交易，你们能帮我查一下吗？另外，我最近换了手机号，之前绑定的号码收不到验证码了，能不能用其他方式验证身份？",
+        "agent_response": "您好！我很乐意帮您处理信用卡可疑消费的问题，并且会确保在查看您账户信息前先完成身份验证。\n\n首先，为了在系统中查找您的账户信息，请问您的全名是？另外，如果您知道自己的用户ID，也可以一并提供。",
+        "user_action": "request_investigate_fraud",
+        "agent_activity": "request_identity_info",
+        "semantic_key": "request_investigate_fraud"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T18:45:55.243376Z",
+    "updated_at": "2026-08-19T18:45:55.243379Z",
+    "trace_id": null
+  }
+}

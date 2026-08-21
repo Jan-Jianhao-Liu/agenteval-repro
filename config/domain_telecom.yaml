@@ -1,0 +1,56 @@
+# 电信域实验环境：本地模拟电信客服 + full_method 验证域迁移性
+env_name: telecom
+exp_mode: full_method
+
+agent:
+  type: ollama_mock
+  model: qwen3.5:4b
+  api_base: http://127.0.0.1:11434
+  num_ctx: 8192
+  temperature: 0.7
+  system_prompt_file: src/agenteval/drivers/adapters/prompts/telecom.txt
+
+llm:
+  provider: ollama
+  model: my-qwen4b-no-think
+  api_base: http://127.0.0.1:11434
+  temperature: 0.0
+  timeout_sec: 120
+  max_retries: 3
+  retry_backoff: [1, 3, 5]
+  circuit_fail_threshold: 5
+  circuit_cooldown_sec: 60
+  json_fix_retries: 2
+
+session:
+  total_rounds: 6
+  max_turns: 8
+  concurrency: 3
+  reset_on_error: true
+  explorer: llm
+  objectives:
+    - 我想换个更便宜的套餐
+    - 帮我查一下这个月的话费
+    - 我要销户
+    - 宽带到期了怎么续费
+    - 合约期内能改套餐吗
+    - 我的流量不够用，加个包
+
+cache:
+  enabled: true
+  dir: data/cache
+
+storage:
+  data_dir: data/telecom
+  trace_dir: data/telecom/trace
+
+dbscan:
+  eps: 0.99
+  min_samples: 1
+
+test:
+  boundary_limit: 25
+
+trace:
+  level: INFO
+  save_input_output: true

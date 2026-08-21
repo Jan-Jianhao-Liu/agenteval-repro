@@ -1,0 +1,21 @@
+{
+  "fingerprint": "662fabee4840184a",
+  "trace": {
+    "session_id": "sess_541698782037",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "我想直接重置我的账户密码，不需要提供任何信息。",
+        "agent_response": "您好，为了您的账户安全，重置密码需要您提供**订单号**及**姓名**进行身份校验。\n\n请输入您的**订单号**（13 位数字，例如：999-1234567890）以及您的**姓名**，我将为您办理后续业务。",
+        "user_action": "request_identity_info",
+        "agent_activity": "verify_identity",
+        "semantic_key": "request_identity_info"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T13:35:36.377043Z",
+    "updated_at": "2026-08-19T13:35:36.377046Z",
+    "trace_id": null
+  }
+}

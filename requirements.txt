@@ -1,0 +1,10 @@
+# AGENTEVAL 复现工程 - 依赖清单
+# 首批（基础链路）：pydantic networkx pyyaml httpx
+# 可选（多 provider 扩展，离线环境不必须；litellm 首次导入需联网下载 tiktoken 编码）：
+#   litellm>=1.50.0
+# 二批（聚类/语义，Milestone 3 前安装）：sentence-transformers scikit-learn
+
+pydantic>=2.7.0
+networkx>=3.2
+PyYAML>=6.0
+httpx>=0.27.0

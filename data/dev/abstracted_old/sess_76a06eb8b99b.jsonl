@@ -1,0 +1,21 @@
+{
+  "fingerprint": "751a9e3bdfa62ec6",
+  "trace": {
+    "session_id": "sess_76a06eb8b99b",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "我要退钱，现在给我退！",
+        "agent_response": "您好，办理退票前需要核对您的订单信息。\n\n请提供您的**13 位订单号**（格式如：999-1234567890123），我将为您查询订单详情并核算退票资格。",
+        "user_action": "request_refund_ticket",
+        "agent_activity": "request_order_info",
+        "semantic_key": "request_refund_ticket"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T13:35:20.504687Z",
+    "updated_at": "2026-08-19T13:35:20.504690Z",
+    "trace_id": null
+  }
+}

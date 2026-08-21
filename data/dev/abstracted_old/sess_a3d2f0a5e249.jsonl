@@ -1,0 +1,21 @@
+{
+  "fingerprint": "804369bcad7526f3",
+  "trace": {
+    "session_id": "sess_a3d2f0a5e249",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "我要退款，现在立刻给我处理，别问我的信息。",
+        "agent_response": "您好，为了保障您的资金安全并核实订单信息，处理退款前**必须**提供**订单号**（13 位数字，如 999-1234567890）及**姓名**进行核对。\n\n请提供您的订单号，我将立即为您查询航班状态及票种资格。",
+        "user_action": "request_refund_ticket",
+        "agent_activity": "request_order_info",
+        "semantic_key": "request_refund_ticket"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T13:20:20.780702Z",
+    "updated_at": "2026-08-19T13:20:20.780705Z",
+    "trace_id": null
+  }
+}

@@ -1,0 +1,49 @@
+# exp 环境：正式消融实验（航空域三组对比），复用真实探索配置
+env_name: exp
+exp_mode: full_method          # 运行实验时由命令行参数覆盖
+
+agent:
+  type: t3bench                # 实验环境接入真实 τ³-bench
+  model: ""                    # τ³-bench 无需本地模型
+  api_base: ""                 # 填入 τ³-bench 端点
+  num_ctx: 8192
+  temperature: 0.0
+
+llm:
+  provider: ollama
+  model: my-qwen4b-no-think
+  api_base: http://127.0.0.1:11434
+  temperature: 0.0
+  timeout_sec: 180
+  max_retries: 3
+  retry_backoff: [1, 3, 5]
+  circuit_fail_threshold: 5
+  circuit_cooldown_sec: 60
+  json_fix_retries: 2
+
+session:
+  total_rounds: 10
+  max_turns: 10
+  concurrency: 4
+  reset_on_error: true
+
+cache:
+  enabled: true
+  dir: data/cache
+
+storage:
+  data_dir: data/exp
+  trace_dir: data/exp/trace
+
+dbscan:
+  eps: 0.7
+  min_samples: 1
+
+test:
+  boundary_limit: 50
+  judge_verdicts: [pass, fail, inconclusive]
+  fault_types: [none, skip_confirmation, missing_identity, missing_eligibility, illegal_param_passed]
+
+trace:
+  level: INFO
+  save_input_output: true

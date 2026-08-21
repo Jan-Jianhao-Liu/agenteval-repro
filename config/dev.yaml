@@ -1,0 +1,51 @@
+# dev 环境：本地 Ollama 模拟智能体 + 日志全开，用于开发调试
+env_name: dev
+exp_mode: full_method          # prompt_only | graph_context | full_method
+taxonomy_file: data/smallset/airline_samples.json
+
+agent:
+  type: ollama_mock            # ollama_mock | t3bench
+  model: qwen3.5:4b            # 模拟 τ³-bench 智能体用的本地模型
+  api_base: http://127.0.0.1:11434
+  num_ctx: 8192
+  temperature: 0.7
+
+llm:
+  provider: ollama             # litellm provider
+  model: my-qwen4b-no-think    # 各模块 LLM 用模型（免思考版）
+  api_base: http://127.0.0.1:11434
+  temperature: 0.0
+  timeout_sec: 120
+  max_retries: 3               # 指数退避 1s/3s/5s
+  retry_backoff: [1, 3, 5]
+  circuit_fail_threshold: 5    # 连续失败次数触发熔断
+  circuit_cooldown_sec: 60
+  json_fix_retries: 2          # JSON 解析失败修复重试次数
+
+session:
+  total_rounds: 12             # 本轮探索会话条数
+  max_turns: 10                # 单会话轮上限
+  concurrency: 3               # 异步并发上限
+  reset_on_error: true
+  explorer: llm                # simple | llm（LLM 探索规划器扩大覆盖）
+
+cache:
+  enabled: true
+  dir: data/cache
+
+storage:
+  data_dir: data/dev
+  trace_dir: data/dev/trace
+
+dbscan:
+  eps: 0.99                 # 相似度阈值（余弦距离=1-eps）：bge-m3 对图元素标签区分度有限，近阈值=只合并几乎相同文本
+  min_samples: 1
+
+test:
+  boundary_limit: 50          # 每模式边界测试上限（与方案 3.2 共享超参一致）
+  judge_verdicts: [pass, fail, inconclusive]
+  fault_types: [none, skip_confirmation, missing_identity, missing_eligibility, illegal_param_passed]
+
+trace:
+  level: DEBUG                 # DEBUG | INFO | WARN
+  save_input_output: true

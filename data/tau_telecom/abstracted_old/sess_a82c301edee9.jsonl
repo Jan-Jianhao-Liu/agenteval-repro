@@ -1,0 +1,21 @@
+{
+  "fingerprint": "c36a1bda662c0e07",
+  "trace": {
+    "session_id": "sess_a82c301edee9",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "帮我退一下昨天那笔付款，订单号是ABC-12345，日期是2023年2月30日，航班号是CA1234。",
+        "agent_response": "您好！很抱歉，我无法处理与航班或订单退款相关的事务。我是电信客服代理，只能帮助处理与您的手机账户相关的问题，例如：\n\n- 技术故障排查（通话、移动数据、彩信等）\n- 逾期账单支付\n- 线路暂停/恢复\n- 套餐变更\n- 数据加油（Data Refueling）\n- 国际漫游启用\n\n请问有什么与您的电信服务相关的问题我可以帮助您解决吗？",
+        "user_action": "request_refund_ticket",
+        "agent_activity": "reject_refund_redirect",
+        "semantic_key": "request_refund_ticket"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T18:01:55.558744Z",
+    "updated_at": "2026-08-19T18:01:55.558747Z",
+    "trace_id": null
+  }
+}

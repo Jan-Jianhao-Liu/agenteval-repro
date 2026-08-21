@@ -1,0 +1,56 @@
+# 零售域实验环境：本地模拟零售客服 + full_method 验证域迁移性
+env_name: retail
+exp_mode: full_method
+
+agent:
+  type: ollama_mock
+  model: qwen3.5:4b
+  api_base: http://127.0.0.1:11434
+  num_ctx: 8192
+  temperature: 0.7
+  system_prompt_file: src/agenteval/drivers/adapters/prompts/retail.txt
+
+llm:
+  provider: ollama
+  model: my-qwen4b-no-think
+  api_base: http://127.0.0.1:11434
+  temperature: 0.0
+  timeout_sec: 120
+  max_retries: 3
+  retry_backoff: [1, 3, 5]
+  circuit_fail_threshold: 5
+  circuit_cooldown_sec: 60
+  json_fix_retries: 2
+
+session:
+  total_rounds: 6
+  max_turns: 8
+  concurrency: 3
+  reset_on_error: true
+  explorer: llm
+  objectives:
+    - 我要退掉昨天买的电饭煲
+    - 帮我查一下我的订单
+    - 收到的衣服有质量问题，要退货
+    - 生鲜坏了可以退吗
+    - 我要开发票
+    - 包裹还没到，物流卡住了
+
+cache:
+  enabled: true
+  dir: data/cache
+
+storage:
+  data_dir: data/retail
+  trace_dir: data/retail/trace
+
+dbscan:
+  eps: 0.99
+  min_samples: 1
+
+test:
+  boundary_limit: 25
+
+trace:
+  level: INFO
+  save_input_output: true

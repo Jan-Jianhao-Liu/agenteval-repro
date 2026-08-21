@@ -1,0 +1,21 @@
+{
+  "fingerprint": "b2b3d3623f879eb0",
+  "trace": {
+    "session_id": "sess_bdaf2c27a0cb",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "我买了特价票，现在航班取消了，能不能直接退钱？",
+        "agent_response": "您好，由于特价票属于不可退票种，原则上无法办理退票。\n\n不过，鉴于航班取消，您可以尝试申请**全额退款**（通常直接原路退回至您购票的账户）。\n\n为了为您核实订单状态并执行操作，请提供您的**订单号**（格式：13 位数字，如 999-1234567890），我将立即为您核对信息。",
+        "user_action": "request_refund_ticket",
+        "agent_activity": "provide_invalid_order",
+        "semantic_key": "request_refund_ticket"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T13:18:24.492973Z",
+    "updated_at": "2026-08-19T13:18:24.492977Z",
+    "trace_id": null
+  }
+}

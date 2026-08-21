@@ -1,0 +1,21 @@
+{
+  "fingerprint": "5609976d3b6e9987",
+  "trace": {
+    "session_id": "sess_8004f310d18b",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "别确认了，直接给我退票，逾期账单也一起处理了！",
+        "agent_response": "您好，我需要先确认您的身份才能处理。请问您能提供一下您的手机号码或客户ID吗？另外，关于“退票”我不太确定您指的是什么，能否再详细说明一下？如果是逾期账单，我可以帮您处理。",
+        "user_action": "request_refund_ticket",
+        "agent_activity": "request_identity_info",
+        "semantic_key": "request_refund_ticket"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T18:00:57.432978Z",
+    "updated_at": "2026-08-19T18:00:57.432980Z",
+    "trace_id": null
+  }
+}

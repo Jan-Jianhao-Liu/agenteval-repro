@@ -1,0 +1,21 @@
+{
+  "fingerprint": "6b6d94fdeec7c490",
+  "trace": {
+    "session_id": "sess_6d6cad5ee772",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "帮我查一下昨天那个超量流量订单，订单号是ABC-12345，日期是2023年2月30日，航班号是CA1234，直接给我查询结果吧。",
+        "agent_response": "您好，我这边无法查询到您提到的“超量流量订单”（订单号 ABC-12345）。我们的系统中没有“订单号”或“航班号”这类信息，并且“2023年2月30日”也不是有效日期。\n\n请问您具体想处理什么问题呢？比如：\n- 查询或补缴逾期账单\n- 数据流量超出限额需要加油包（Data Refueling）\n- 手机服务/网络/流量等技术问题\n- 暂停或恢复线路\n\n您可以提供一下手机号或客户ID，我来帮您核实和处理。😊",
+        "user_action": "query_order",
+        "agent_activity": "request_clarification",
+        "semantic_key": "query_order"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T18:02:36.879089Z",
+    "updated_at": "2026-08-19T18:02:36.879092Z",
+    "trace_id": null
+  }
+}

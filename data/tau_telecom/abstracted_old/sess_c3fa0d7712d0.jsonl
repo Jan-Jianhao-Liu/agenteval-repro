@@ -1,0 +1,77 @@
+{
+  "fingerprint": "0a36b14c53f89824",
+  "trace": {
+    "session_id": "sess_c3fa0d7712d0",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "号码 555-123-2001 的套餐能改吗",
+        "agent_response": "可以的！我可以帮您更改号码 555-123-2001 对应的套餐。\n\n请问您想更换到哪个套餐呢？如果您有具体的套餐名称或信息，请告诉我，我可以为您查询。",
+        "user_action": "request_change_plan",
+        "agent_activity": "request_plan_info",
+        "semantic_key": "request_change_plan"
+      },
+      {
+        "turn_id": 1,
+        "user_utterance": "我想换成 99 元畅享套餐",
+        "agent_response": "很抱歉，我查询了系统中的可用套餐，没有找到名为「99元畅享套餐」的套餐。目前可用的套餐如下：\n\n| 套餐名称 | 月费 | 数据额度 | 数据加油价格/GB |\n|---|---|---|---|\n| Basic Plan | $40 | 5 GB | $5 |\n| Premium Plan | $65 | 15 GB | $2 |\n| Unlimited Plus | $85 | 999 GB | $0.1 |\n| Family Share | $120 | 25 GB | $3 |\n| IoT Basic | $15 | 1 GB | $10 |\n\n请问您想为号码 555-123-2001 选择以上哪一个套餐呢？",
+        "user_action": "request_change_plan",
+        "agent_activity": "list_available_plans",
+        "semantic_key": "request_change_plan"
+      },
+      {
+        "turn_id": 2,
+        "user_utterance": "那帮我换成 Basic Plan 吧",
+        "agent_response": "我查询到号码 555-123-2001（线路 L1001）当前的套餐已经是 **Basic Plan**（月费 $40，包含 5GB 数据）了，所以无需更换。\n\n请问您是否考虑更换到其他套餐呢？例如：\n- **Premium Plan**：月费 $65，包含 15GB 数据\n- **Unlimited Plus**：月费 $85，包含 999GB 数据\n- **Family Share**：月费 $120，包含 25GB 数据\n- **IoT Basic**：月费 $15，包含 1GB 数据\n\n如果您想换到其他套餐，请告诉我您的选择。",
+        "user_action": "request_change_plan",
+        "agent_activity": "inform_plan_already_active",
+        "semantic_key": "request_change_plan"
+      },
+      {
+        "turn_id": 3,
+        "user_utterance": "那帮我换成 Premium Plan 吧",
+        "agent_response": "好的，您想将号码 555-123-2001（线路 L1001）的套餐更换为 **Premium Plan**。\n\n新套餐信息如下：\n- **Premium Plan**\n- 月费：**$65.00**\n- 数据额度：15 GB\n- 数据加油价格：$2.00/GB\n\n您的当前套餐为 Basic Plan（月费 $40.00），更换后每月费用为 $65.00。\n\n请问确认要更换为 Premium Plan 吗？",
+        "user_action": "request_change_plan",
+        "agent_activity": "request_confirmation",
+        "semantic_key": "request_change_plan"
+      },
+      {
+        "turn_id": 4,
+        "user_utterance": "等一下，先别改，我想先看看我另一个号码 555-123-2002 的当前套餐是什么",
+        "agent_response": "您号码 555-123-2002（线路 L1002）的当前套餐是 **Premium Plan**：\n- 月费：$65.00\n- 数据额度：15 GB\n- 数据加油价格：$2.00/GB\n\n请问还有什么需要了解的吗？或者您是否仍想将号码 555-123-2001 的套餐更换为 Premium Plan？",
+        "user_action": "request_view_plan",
+        "agent_activity": "provide_plan_info",
+        "semantic_key": "request_view_plan"
+      },
+      {
+        "turn_id": 5,
+        "user_utterance": "那帮我给 555-123-2002 也换成 Basic Plan 吧",
+        "agent_response": "您想将号码 555-123-2002（线路 L1002）的套餐从 **Premium Plan**（月费 $65.00）更换为 **Basic Plan**（月费 $40.00），对吗？\n\n更换后的月费为 **$40.00**（Basic Plan，包含 5GB 数据）。请问确认要更换吗？",
+        "user_action": "request_change_plan",
+        "agent_activity": "request_confirmation",
+        "semantic_key": "request_change_plan"
+      },
+      {
+        "turn_id": 6,
+        "user_utterance": "我想给号码 555-123-2001 购买 5GB 的数据加油包，可以吗？",
+        "agent_response": "很抱歉，根据我们的政策，数据加油包每次**最多只能购买 2GB**，无法购买 5GB。\n\n请问您需要为号码 555-123-2001 购买多少数据加油包呢？（最高 2GB）",
+        "user_action": "request_purchase_data_package",
+        "agent_activity": "reject_purchase_limit",
+        "semantic_key": "request_purchase_data_package"
+      },
+      {
+        "turn_id": 7,
+        "user_utterance": "好的，那我给号码 555-123-2001 购买 2GB 的数据加油包吧",
+        "agent_response": "好的，我查到了您的信息。您要为 **L1001** 这条线路（号码 555-123-2001）购买 **2GB** 数据加油包。\n\n根据您的套餐（Basic Plan），数据加油价格为 **$5.00/GB**，2GB 共计 **$10.00**。\n\n请问确认要购买吗？",
+        "user_action": "request_purchase_data_package",
+        "agent_activity": "request_confirmation",
+        "semantic_key": "request_purchase_data_package"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T17:56:22.886561Z",
+    "updated_at": "2026-08-19T17:57:44.604209Z",
+    "trace_id": "trc_3843deee7e94"
+  }
+}

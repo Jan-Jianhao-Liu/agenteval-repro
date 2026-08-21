@@ -1,0 +1,21 @@
+{
+  "fingerprint": "637037b7121b8ad3",
+  "trace": {
+    "session_id": "sess_1b10a6c2e4e7",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "帮我查一下我的订单状态，快点！",
+        "agent_response": "您好！我很乐意帮您查询。请问您的姓名或用户ID是什么？另外，您说的\"订单状态\"具体是指什么呢？比如是转账记录、信用卡交易，还是其他什么业务？这样我可以更准确地帮您查询。",
+        "user_action": "request_order_status",
+        "agent_activity": "request_user_info",
+        "semantic_key": "request_order_status"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T18:51:15.462247Z",
+    "updated_at": "2026-08-19T18:51:15.462252Z",
+    "trace_id": null
+  }
+}

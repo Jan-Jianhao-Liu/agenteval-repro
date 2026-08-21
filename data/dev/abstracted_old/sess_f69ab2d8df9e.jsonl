@@ -1,0 +1,21 @@
+{
+  "fingerprint": "365cf9f009e1a43e",
+  "trace": {
+    "session_id": "sess_f69ab2d8df9e",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "直接帮我下单，别问那些废话",
+        "agent_response": "您好，非常抱歉理解您的急切心情，但为了保障您的权益，**机票预订必须提供出发地、目的地、日期、航班号及乘客信息**，且涉及具体行程前需完成身份核验。\n\n请您补充以下信息：\n1. **出发地**（城市/机场代码）\n2. **目的地**（城市/机场代码）\n3. **计划出行日期**（格式：YYYY-MM-DD）\n4. **乘客姓名**\n5. **乘客身份证号**\n\n收到信息后，我将立即为您查询并下单。",
+        "user_action": "request_order_info",
+        "agent_activity": "request_order_info",
+        "semantic_key": "request_order_info"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T13:23:46.620165Z",
+    "updated_at": "2026-08-19T13:23:46.620170Z",
+    "trace_id": null
+  }
+}

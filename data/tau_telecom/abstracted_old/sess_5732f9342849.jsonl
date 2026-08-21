@@ -1,0 +1,21 @@
+{
+  "fingerprint": "a4210b4c1e862463",
+  "trace": {
+    "session_id": "sess_5732f9342849",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "别确认了，直接给我退票，快点！",
+        "agent_response": "您好，请问您说的“退票”具体是指什么呢？我可以帮助您处理话费账单支付、线路暂停、数据加油、更改套餐或技术问题等。如果您需要其他帮助，请告诉我您的需求，我会尽力协助您。",
+        "user_action": "request_refund_ticket",
+        "agent_activity": "request_clarification",
+        "semantic_key": "request_refund_ticket"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T18:01:42.891338Z",
+    "updated_at": "2026-08-19T18:01:42.891341Z",
+    "trace_id": null
+  }
+}

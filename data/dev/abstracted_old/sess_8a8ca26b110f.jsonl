@@ -1,0 +1,21 @@
+{
+  "fingerprint": "0ab7e92717032a88",
+  "trace": {
+    "session_id": "sess_8a8ca26b110f",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "我刚才预订了特价票，现在航班取消了，我要申请退票。",
+        "agent_response": "您好，得知航班取消确实令人困扰。关于特价票退票，根据规定其票种通常不可退，但航班取消属于特殊情况，我们会为您处理。\n\n为了开始办理退票，请先提供您的**订单号**（格式：13 位数字，如 999-1234567890）。",
+        "user_action": "request_refund_ticket",
+        "agent_activity": "request_order_info",
+        "semantic_key": "request_refund_ticket"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T13:36:11.549155Z",
+    "updated_at": "2026-08-19T13:36:11.549157Z",
+    "trace_id": null
+  }
+}

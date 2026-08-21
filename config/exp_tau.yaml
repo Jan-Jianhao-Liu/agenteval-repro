@@ -1,0 +1,77 @@
+# 真实实验环境：τ³-bench 航空域 + DeepSeek 真实大模型（温度 0）
+# 被测智能体：τ³-bench LLMAgent（deepseek-v4-flash，LiteLLM 驱动）
+# 框架模块 LLM：deepseek-chat（OpenAI 兼容接口，温度 0）
+# taxonomy_file 留空：真实环境由 LLM 自由抽象（模拟环境 taxonomy 不适用）
+env_name: exp_tau
+exp_mode: full_method
+
+agent:
+  type: t3bench                # 真实 τ³-bench
+  domain: airline
+  model: deepseek/deepseek-v4-flash
+  temperature: 0.0
+
+llm:
+  provider: openai_compat
+  model: deepseek-chat
+  base_url: https://api.deepseek.com
+  api_key: env:DEEPSEEK_API_KEY
+  temperature: 0.0
+  timeout_sec: 180
+  max_retries: 3
+  retry_backoff: [2, 5, 10]
+  circuit_fail_threshold: 5
+  circuit_cooldown_sec: 60
+  json_fix_retries: 2
+
+session:
+  total_rounds: 12
+  max_turns: 8
+  concurrency: 2
+  reset_on_error: true
+  explorer: llm
+  objectives:
+    - 你好，我是 mia_li_3668，我想退掉我下周的机票
+    - 帮我查一下我名下的预订，我的 user_id 是 chen_jackson_3290
+    - 我的航班延误了想改签，我是 mia_li_3668
+    - 我是 chen_jackson_3290，订单 4WQ150 可以退吗
+    - 行李超重怎么收费？我的 user_id 是 mia_li_3668
+    - 帮我选一个靠窗座位，user_id 是 chen_jackson_3290
+    - 我的积分可以兑换什么？user_id mia_li_3668
+    - 航班取消了我怎么改签？我是 chen_jackson_3290
+    - 帮我看看行李额度，user mia_li_3668
+    - 升舱要加多少钱？user_id chen_jackson_3290
+    - 我想订一张下个月去上海的机票，mia_li_3668
+    - 我的机票能退改吗？订单 4WQ150
+
+cache:
+  enabled: true
+  dir: data/cache
+
+storage:
+  data_dir: data/tau
+  trace_dir: data/tau/trace
+
+dbscan:
+  eps: 0.99
+  min_samples: 1
+
+test:
+  boundary_limit: 90
+
+trace:
+  level: INFO
+  save_input_output: true
+
+auditor_llm:
+  provider: openai_compat
+  model: glm-5.2
+  base_url: https://open.bigmodel.cn/api/paas/v4
+  api_key: env:GLM_API_KEY
+  temperature: 0.0
+  timeout_sec: 180
+  max_retries: 3
+  retry_backoff: [2, 5, 10]
+  circuit_fail_threshold: 5
+  circuit_cooldown_sec: 60
+  json_fix_retries: 2

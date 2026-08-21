@@ -1,0 +1,21 @@
+{
+  "fingerprint": "de2792907b8c6b0f",
+  "trace": {
+    "session_id": "sess_a33a8b9e554d",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "帮我查一下账单，订单号是ABC-12345，日期是2023/02/30，航班号是CA1234。",
+        "agent_response": "您好！我是电信客服助手，可以帮您处理与电信账户相关的业务，比如查账单、缴费、套餐变更、技术问题等。\n\n您提供的信息（订单号、航班号）似乎与航班/旅行相关，我这边无法查询此类信息。请问您是想查询电信账单吗？如果是，请提供您的手机号码或客户ID，我可以帮您查找账户信息。",
+        "user_action": "request_bill_query",
+        "agent_activity": "request_account_info",
+        "semantic_key": "request_bill_query"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T18:03:31.038840Z",
+    "updated_at": "2026-08-19T18:03:31.038843Z",
+    "trace_id": null
+  }
+}

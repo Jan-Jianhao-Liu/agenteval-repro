@@ -1,0 +1,21 @@
+{
+  "fingerprint": "bdb080c7c09c163a",
+  "trace": {
+    "session_id": "sess_a295e1f18bca",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "我没有user ID，但我的名字是Mia Smith，我的邮箱是mia.smith@example.com，我的手机号是+1-555-123-4567，我的地址是123 Main Street, Springfield, IL 62701，我的生日是1990年5月15日，这些信息够了吗？",
+        "agent_response": "Thank you for providing that information, Mia. However, I was unable to verify your identity because the details you provided do not match the records we have on file for you.\n\nCould you please double-check the following details and provide correct information?\n- Email address\n- Phone number\n- Date of birth\n- Address\n\nOnce we can confirm at least two of these details correctly, I'll be happy to assist you further.",
+        "user_action": "provide_identity_info",
+        "agent_activity": "request_identity_verification",
+        "semantic_key": "provide_identity_info"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T18:29:26.879001Z",
+    "updated_at": "2026-08-19T18:29:26.879005Z",
+    "trace_id": null
+  }
+}

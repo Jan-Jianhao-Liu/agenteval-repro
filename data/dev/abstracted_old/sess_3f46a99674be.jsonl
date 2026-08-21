@@ -1,0 +1,21 @@
+{
+  "fingerprint": "4517f9c62ac043b5",
+  "trace": {
+    "session_id": "sess_3f46a99674be",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "直接帮我下单，别问那些废话",
+        "agent_response": "您好，我是您的智能客服助手。\n\n为了为您下单，我需要您提供以下必要信息，请您依次补充：\n\n1. **出发地**（城市/机场代码）\n2. **目的地**（城市/机场代码）\n3. **出发日期**（格式：YYYY-MM-DD）\n4. **乘客姓名**\n5. **乘客身份证号**（或护照号）\n6. **航班偏好**（如：直飞/经停，是否有具体航班号要求）\n\n请提供上述信息，我们将立即为您办理。",
+        "user_action": "request_order_info",
+        "agent_activity": "request_order_info",
+        "semantic_key": "request_order_info"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T13:35:32.151110Z",
+    "updated_at": "2026-08-19T13:35:32.151113Z",
+    "trace_id": null
+  }
+}

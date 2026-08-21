@@ -1,0 +1,14 @@
+{
+  "exp_mode": "graph_context",
+  "n_total": 50,
+  "n_valid": 50,
+  "valid_rate": 1.0,
+  "n_independent_boundaries": 2,
+  "dup_rate": 0.96,
+  "far": 0.0,
+  "accuracy": 0.92,
+  "coverage_recall": 0.42857142857142855,
+  "n_judge_fail": 4,
+  "dfg_nodes": 7,
+  "dfg_edges": 32
+}

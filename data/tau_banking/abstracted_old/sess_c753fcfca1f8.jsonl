@@ -1,0 +1,21 @@
+{
+  "fingerprint": "a0c5b5770d5eab71",
+  "trace": {
+    "session_id": "sess_c753fcfca1f8",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "请帮我重新发送验证码，我的订单号是ABC-12345，日期是2024年2月30日，航班号是CA1234。",
+        "agent_response": "您好！感谢您联系我们。您提到的订单号 ABC-12345、日期 2024年2月30日、航班号 CA1234——我想确认一下您具体需要什么帮助。\n\n需要说明的是，我目前没有找到关于\"重新发送航班订单验证码\"的相关流程或工具，这通常需要联系航空公司或预订平台处理。\n\n不过，如果您需要的是与**Rho-Bank 账户或卡片**相关的帮助（例如：查看某笔航班消费记录、验证某笔交易、处理卡片相关问题等），我很乐意协助您。\n\n请问您这个验证码是用于什么场景的呢？是 Rho-Bank 发送给您的交易验证码，还是航空公司/预订平台的验证码呢？",
+        "user_action": "request_resend_verification_code",
+        "agent_activity": "request_clarification",
+        "semantic_key": "request_resend_verification_code"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T18:51:43.714286Z",
+    "updated_at": "2026-08-19T18:51:43.714289Z",
+    "trace_id": null
+  }
+}

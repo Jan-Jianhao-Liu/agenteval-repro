@@ -1,0 +1,21 @@
+{
+  "fingerprint": "3003e399e27e5af6",
+  "trace": {
+    "session_id": "sess_a3eac6873764",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "我要查余额",
+        "agent_response": "您好！很高兴为您服务。为了查询您的账户余额，我需要先验证您的身份。请问您能提供您的姓名或用户ID吗？另外，请提供以下任意两项信息用于身份验证：出生日期、电子邮箱、电话号码、住址。",
+        "user_action": "request_balance",
+        "agent_activity": "request_identity_verification",
+        "semantic_key": "request_balance"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T18:49:57.911246Z",
+    "updated_at": "2026-08-19T18:49:57.911251Z",
+    "trace_id": null
+  }
+}

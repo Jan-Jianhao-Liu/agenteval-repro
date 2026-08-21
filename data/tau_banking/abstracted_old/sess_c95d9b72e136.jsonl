@@ -1,0 +1,21 @@
+{
+  "fingerprint": "2a6b327540bc679e",
+  "trace": {
+    "session_id": "sess_c95d9b72e136",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "我收到一条短信说我的账户有可疑交易，但我没做过这笔交易，你们能帮我查一下吗？另外，我最近换了手机号，之前的验证方式可能收不到验证码了，能不能用别的方式验证我的身份？",
+        "agent_response": "您好！我很乐意帮您处理这个问题。首先，我需要确认您的身份才能查看您的账户信息。\n\n请问您能提供以下信息吗？\n1. 您的全名（姓名）\n2. 您的用户ID（如果有的话）\n\n另外，为了验证您的身份，您能提供以下任意两项信息吗？\n- 出生日期\n- 电子邮箱地址\n- 手机号码\n- 家庭住址\n\n这样我就可以安全地为您查询账户信息了。",
+        "user_action": "request_fraud_investigation",
+        "agent_activity": "request_identity_verification",
+        "semantic_key": "request_fraud_investigation"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T18:47:00.732776Z",
+    "updated_at": "2026-08-19T18:47:00.732779Z",
+    "trace_id": null
+  }
+}

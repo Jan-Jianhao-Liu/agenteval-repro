@@ -1,0 +1,21 @@
+{
+  "fingerprint": "c71482884b4c9c8c",
+  "trace": {
+    "session_id": "sess_69430c842bdf",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "我没有user ID，但我的名字是Mia Smith，邮箱是mia.smith@example.com，手机是+1-555-123-4567，这些信息应该足够了吧？你们系统里肯定有我的记录，直接查一下不就行了？",
+        "agent_response": "Thank you, Mia. I found your record in our system. However, the email address and phone number you provided don't match what we have on file, so I'm unable to verify your identity with those details.\n\nCould you please provide me with two of the following to verify your identity?\n- Your date of birth\n- Your address on file\n\nOnce confirmed, I'll be happy to help you with whatever you need.",
+        "user_action": "provide_identity_info",
+        "agent_activity": "request_verification_info",
+        "semantic_key": "provide_identity_info"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T18:28:01.641012Z",
+    "updated_at": "2026-08-19T18:28:01.641016Z",
+    "trace_id": null
+  }
+}

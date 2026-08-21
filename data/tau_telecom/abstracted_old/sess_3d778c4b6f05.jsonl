@@ -1,0 +1,21 @@
+{
+  "fingerprint": "ae9a181db45e7b63",
+  "trace": {
+    "session_id": "sess_3d778c4b6f05",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "帮我改一下明天的航班，订单号是ABC123XYZ，日期2024-02-30，航班号CA1234，改成后天下午的。",
+        "agent_response": "您好，很抱歉，我是电信公司客服，只能帮助处理与技术支持、逾期账单支付、线路暂停和套餐变更相关的问题。航班改签不在我的服务范围内，我无法为您处理这项请求。建议您联系航空公司或购票平台进行改签。请问还有其他可以帮您的吗？",
+        "user_action": "request_change_flight",
+        "agent_activity": "deny_service_scope",
+        "semantic_key": "request_change_flight"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T18:01:08.391807Z",
+    "updated_at": "2026-08-19T18:01:08.391809Z",
+    "trace_id": null
+  }
+}

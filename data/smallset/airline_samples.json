@@ -1,0 +1,149 @@
+{
+  "domain": "airline",
+  "description": "航空域小样本验证基线：5 段退票相关多轮对话，含同义话术对；gold 为人工标注标准答案（user_action/agent_activity/semantic_key）。后续所有 Prompt 调优均以此集为基线对比。",
+  "samples": [
+    {
+      "sample_id": "S1",
+      "scenario": "正常退票全流程（起飞前24h以上，可退票种）",
+      "turns": [
+        {
+          "user": "我想退掉下周三的机票",
+          "agent": "好的，为您办理退票。请问您的订单号是多少？格式为 999 开头的 13 位数字。",
+          "gold": {"user_action": "request_refund_ticket", "agent_activity": "request_order_info", "semantic_key": "request_refund_ticket"}
+        },
+        {
+          "user": "订单号是 999-1234567890",
+          "agent": "收到。请问您的姓名是？我需要核对一下订票人身份。",
+          "gold": {"user_action": "provide_order_info", "agent_activity": "verify_identity", "semantic_key": "provide_order_info"}
+        },
+        {
+          "user": "我叫李华",
+          "agent": "李华您好，身份核对通过。您的航班为下周三 10:30 武汉飞北京，起飞前 24 小时以上，票种为可退经济舱，可免费退票。确认退票吗？",
+          "gold": {"user_action": "provide_identity", "agent_activity": "check_refund_eligibility", "semantic_key": "provide_identity"}
+        },
+        {
+          "user": "确认退票，退到原支付方式",
+          "agent": "好的，最后确认：航班 10:30 武汉-北京，票款 680 元将退回原支付方式，预计 3-5 个工作日到账。确认执行退票吗？",
+          "gold": {"user_action": "confirm_refund", "agent_activity": "request_refund_confirmation", "semantic_key": "confirm_refund"}
+        },
+        {
+          "user": "确认执行",
+          "agent": "退票已受理，退款 680 元将退回原支付方式。退票单号 TB20260819-001，可在订单中心查询。",
+          "gold": {"user_action": "confirm_refund", "agent_activity": "execute_refund", "semantic_key": "confirm_refund"}
+        }
+      ]
+    },
+    {
+      "sample_id": "S2",
+      "scenario": "起飞前 24 小时内退票（50% 手续费）",
+      "turns": [
+        {
+          "user": "帮我退掉今天下午的航班，赶不上了",
+          "agent": "很抱歉听到这个消息。请提供您的订单号，我先为您查询。",
+          "gold": {"user_action": "request_refund_ticket", "agent_activity": "request_order_info", "semantic_key": "request_refund_ticket"}
+        },
+        {
+          "user": "订单号 999-9876543210，姓名王芳",
+          "agent": "王芳您好，已核对身份。您的航班今天 15:40 起飞，距离起飞不足 24 小时，按规则退票需收取 50% 手续费。确认退票吗？",
+          "gold": {"user_action": "provide_order_info", "agent_activity": "check_refund_eligibility", "semantic_key": "provide_order_info"}
+        },
+        {
+          "user": "手续费有点高，还是要退吧",
+          "agent": "好的，请确认：收取 50% 手续费后，退款金额为 340 元，将退至原支付方式。确认执行吗？",
+          "gold": {"user_action": "confirm_refund", "agent_activity": "request_refund_confirmation", "semantic_key": "confirm_refund"}
+        },
+        {
+          "user": "确认",
+          "agent": "已受理退票，退款 340 元（已扣 50% 手续费），预计 3-5 个工作日到账。",
+          "gold": {"user_action": "confirm_refund", "agent_activity": "execute_refund", "semantic_key": "confirm_refund"}
+        }
+      ]
+    },
+    {
+      "sample_id": "S3",
+      "scenario": "特价票不可退（资格校验拒绝）",
+      "turns": [
+        {
+          "user": "我要取消这张特价机票",
+          "agent": "好的，请提供订单号和您的姓名，我来查询退票资格。",
+          "gold": {"user_action": "request_refund_ticket", "agent_activity": "request_order_info", "semantic_key": "request_refund_ticket"}
+        },
+        {
+          "user": "订单 999-5551234567，张伟",
+          "agent": "张伟您好，已核对身份。您的票为「特惠不可退」票种，按规则不支持退票，但可为您办理改签或保留余额。需要帮您处理吗？",
+          "gold": {"user_action": "provide_order_info", "agent_activity": "check_refund_eligibility", "semantic_key": "provide_order_info"}
+        },
+        {
+          "user": "好吧，那就先不退",
+          "agent": "好的，已为您保留原机票。如有其他需求随时联系我们。",
+          "gold": {"user_action": "withdraw_refund_request", "agent_activity": "provide_alternative", "semantic_key": "withdraw_refund_request"}
+        }
+      ]
+    },
+    {
+      "sample_id": "S4",
+      "scenario": "订单号格式非法（非法输入拦截后重输）",
+      "turns": [
+        {
+          "user": "我要取消我的航班",
+          "agent": "好的，请提供您的订单号（13 位数字，如 999-1234567890）。",
+          "gold": {"user_action": "request_refund_ticket", "agent_activity": "request_order_info", "semantic_key": "request_refund_ticket"}
+        },
+        {
+          "user": "单号是 abc123",
+          "agent": "您提供的订单号格式不正确，请重新输入 13 位数字订单号。",
+          "gold": {"user_action": "provide_invalid_order", "agent_activity": "request_retype_order", "semantic_key": "provide_invalid_order"}
+        },
+        {
+          "user": "哦，是 999-4567890123",
+          "agent": "收到，请问您的姓名是？",
+          "gold": {"user_action": "provide_order_info", "agent_activity": "verify_identity", "semantic_key": "provide_order_info"}
+        },
+        {
+          "user": "陈静",
+          "agent": "陈静您好，已核对身份。您的航班为明天 09:00，起飞前 24 小时以上且票种可退，可免费退票。确认退票吗？",
+          "gold": {"user_action": "provide_identity", "agent_activity": "check_refund_eligibility", "semantic_key": "provide_identity"}
+        },
+        {
+          "user": "确认",
+          "agent": "已受理退票，退款将退回原支付方式，预计 3-5 个工作日到账。",
+          "gold": {"user_action": "confirm_refund", "agent_activity": "execute_refund", "semantic_key": "confirm_refund"}
+        }
+      ]
+    },
+    {
+      "sample_id": "S5",
+      "scenario": "用户未带订单号（按身份信息查询补全）",
+      "turns": [
+        {
+          "user": "麻烦帮我退一张票",
+          "agent": "好的，请问您的订单号是多少？",
+          "gold": {"user_action": "request_refund_ticket", "agent_activity": "request_order_info", "semantic_key": "request_refund_ticket"}
+        },
+        {
+          "user": "我没带订单号，能查吗",
+          "agent": "可以的，请提供订票时使用的姓名和身份证后四位，我帮您查询。",
+          "gold": {"user_action": "request_order_by_identity", "agent_activity": "request_identity_info", "semantic_key": "request_order_by_identity"}
+        },
+        {
+          "user": "李华，后四位 1234",
+          "agent": "已为您查到订单 999-1234567890，航班为下周三 10:30 武汉-北京。确认是该订单吗？",
+          "gold": {"user_action": "provide_identity", "agent_activity": "confirm_order", "semantic_key": "provide_identity"}
+        },
+        {
+          "user": "是的，就是它，退掉吧",
+          "agent": "好的，您的票种为可退经济舱，起飞前 24 小时以上，可免费退票。确认退票吗？",
+          "gold": {"user_action": "confirm_order", "agent_activity": "check_refund_eligibility", "semantic_key": "confirm_order"}
+        },
+        {
+          "user": "确认",
+          "agent": "已受理退票，退款 680 元将退回原支付方式。",
+          "gold": {"user_action": "confirm_refund", "agent_activity": "execute_refund", "semantic_key": "confirm_refund"}
+        }
+      ]
+    }
+  ],
+  "synonym_groups": {
+    "request_refund_ticket": ["我想退掉下周三的机票", "帮我退掉今天下午的航班，赶不上了", "我要取消这张特价机票", "我要取消我的航班", "麻烦帮我退一张票"]
+  }
+}

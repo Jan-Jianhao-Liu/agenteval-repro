@@ -1,0 +1,21 @@
+{
+  "fingerprint": "e9a3c7fd17308bf1",
+  "trace": {
+    "session_id": "sess_fdaa309f5cbf",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "我要查订单信息",
+        "agent_response": "您好，为了查询订单信息，我需要先核对您的身份。\n\n请提供您的**订单号**（格式为 13 位数字）以及**乘机人姓名**。",
+        "user_action": "request_order_info",
+        "agent_activity": "verify_identity",
+        "semantic_key": "request_order_info"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T13:20:53.366523Z",
+    "updated_at": "2026-08-19T13:20:53.366526Z",
+    "trace_id": null
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "fingerprint": "793103354394c719",
+  "trace": {
+    "session_id": "sess_128417188279",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "帮我查一下上个月账单，订单号是2024-13-45A#",
+        "agent_response": "您好！您提供的订单号 2024-13-45A# 无法直接查询到账单信息。为了帮您查看上个月的账单，请您提供以下任一信息以核实身份：\n\n1. 注册手机号码\n2. 客户ID\n3. 您的全名和出生日期\n\n请问您方便提供哪一项呢？",
+        "user_action": "request_bill_query",
+        "agent_activity": "request_identity_info",
+        "semantic_key": "request_bill_query"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T18:02:49.262108Z",
+    "updated_at": "2026-08-19T18:02:49.262112Z",
+    "trace_id": null
+  }
+}

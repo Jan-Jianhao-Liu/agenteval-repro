@@ -1,0 +1,77 @@
+{
+  "fingerprint": "8b90f959f4ac53d9",
+  "trace": {
+    "session_id": "sess_7e4b496bcd91",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "帮我选一个靠窗座位，user_id 是 chen_jackson_3290",
+        "agent_response": "您好！很抱歉，我目前无法为您选择座位。系统内没有选座功能，我只能协助您处理机票预订、改签、取消、行李和保险等相关事务。\n\n请问还有其他可以帮您的吗？例如查询或预订航班？",
+        "user_action": "request_select_seat",
+        "agent_activity": "deny_select_seat",
+        "semantic_key": "request_select_seat"
+      },
+      {
+        "turn_id": 1,
+        "user_utterance": "帮我预订明天从北京到上海的航班，经济舱，一个人",
+        "agent_response": "很抱歉，我查询了系统内可用的机场列表，目前可用的机场均为美国境内机场（如 SFO、JFK、LAX 等），并没有北京或上海的相关航线。\n\n请问您是否需要预订其他航线？如果可以，请告诉我您的行程类型（单程或往返）、出发地、目的地和日期，我会继续为您查询。",
+        "user_action": "request_book_flight",
+        "agent_activity": "deny_booking_no_route",
+        "semantic_key": "request_book_flight"
+      },
+      {
+        "turn_id": 2,
+        "user_utterance": "帮我预订下周三从旧金山到纽约的往返航班，经济舱，两个人",
+        "agent_response": "好的，我来帮您预订。请问：\n\n1. **返程日期**是哪一天？（去程是下周三 2024-05-22 从旧金山 SFO 到纽约 JFK）\n2. 请提供两位乘客的**姓名（名、姓）和出生日期**。\n3. 是否需要购买**旅行保险**（每人 30 美元）？\n\n另外，您的会员等级是 **Silver**，经济舱每位乘客可免费托运 2 件行李。请问需要托运几件行李？",
+        "user_action": "request_book_flight",
+        "agent_activity": "request_flight_details",
+        "semantic_key": "request_book_flight"
+      },
+      {
+        "turn_id": 3,
+        "user_utterance": "帮我取消一个航班预订，预订编号是 ABC123",
+        "agent_response": "很抱歉，系统里没有找到预订编号为 **ABC123** 的预订。\n\n我在您的账户（chen_jackson_3290）下查到的预订编号有：**4WQ150**、**DDHPNX**、**Y69PCE**、**2JV270**。\n\n请问您是要取消其中某一个预订吗？或者您能否确认一下正确的预订编号？",
+        "user_action": "request_cancel_flight",
+        "agent_activity": "request_confirmation",
+        "semantic_key": "request_cancel_flight"
+      },
+      {
+        "turn_id": 4,
+        "user_utterance": "请帮我改签预订编号为 4WQ150 的航班，改到下周二的同一航线",
+        "agent_response": "我已经查到下周二（2024-05-21）DFW ↔ LAX 的航班选项（您原预订是商务舱）：\n\n**去程 DFW → LAX：**\n- **HAT124**：19:00-22:00，商务舱 $266/人（有座）\n- HAT170：03:00-06:00，商务舱 **无座**（不可选）\n\n**返程 LAX → DFW：**\n- **HAT022**：12:00-15:00，商务舱 $337/人（有座）\n- **HAT186**：02:00-05:00，商务舱 $471/人（有座）\n- **HAT187**：09:00-12:00，商务舱 $252/人（有座）\n\n请问您希望：\n1. **去程和返程都改到 5/21**，还是只改**去程**？\n2. 如果要改返程，选择哪个航班？",
+        "user_action": "request_reschedule_flight",
+        "agent_activity": "offer_reschedule_options",
+        "semantic_key": "request_reschedule_flight"
+      },
+      {
+        "turn_id": 5,
+        "user_utterance": "我想为预订编号 4WQ150 添加一件托运行李，请问费用是多少？",
+        "agent_response": "根据您的预订信息：\n\n- **预订 4WQ150**：商务舱，3 位乘客\n- 您是 **银卡会员**，商务舱每位乘客可免费托运 **3 件**行李，即共 **9 件**免费额度\n- 当前预订已包含 **5 件**托运行李（均在免费额度内）\n\n每增加一件额外托运行李的费用是 **50 美元**。所以添加 1 件托运行李的费用为 **50 美元**。\n\n请问您确认要添加 1 件托运行李吗？如果确认，请告知您的支付方式（需要是您账户中已有的支付方式）。",
+        "user_action": "request_add_baggage",
+        "agent_activity": "provide_baggage_fee",
+        "semantic_key": "request_add_baggage"
+      },
+      {
+        "turn_id": 6,
+        "user_utterance": "我想为预订编号 4WQ150 的三位乘客购买旅行保险，请问怎么操作？",
+        "agent_response": "很抱歉，根据我们的政策，**旅行保险无法在初始预订后添加**。\n\n您的预订 4WQ150 在预订时未购买旅行保险，因此现在无法为您补购。请问还有其他可以帮您的吗？",
+        "user_action": "request_add_travel_insurance",
+        "agent_activity": "deny_add_travel_insurance",
+        "semantic_key": "request_add_travel_insurance"
+      },
+      {
+        "turn_id": 7,
+        "user_utterance": "请帮我修改预订编号 4WQ150 中一位乘客的姓名，原姓名是 John Smith，改为 Jane Smith",
+        "agent_response": "我查看了您的预订 **4WQ150**，该预订中的乘客信息如下：\n\n1. **Chen Jackson**（1956-07-07）\n2. **Raj Smith**（1967-04-01）\n3. **Fatima Martin**（1970-01-20）\n\n预订中并没有名为 **John Smith** 的乘客，因此无法将 John Smith 修改为 Jane Smith。\n\n请问您是否想修改的是其他乘客？如果是，请提供正确的原姓名以及您希望修改后的姓名。",
+        "user_action": "request_modify_passenger_name",
+        "agent_activity": "deny_modify_passenger_name",
+        "semantic_key": "request_modify_passenger_name"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T19:48:10.831659Z",
+    "updated_at": "2026-08-19T19:49:08.092039Z",
+    "trace_id": "trc_81e87ffa4fe0"
+  }
+}

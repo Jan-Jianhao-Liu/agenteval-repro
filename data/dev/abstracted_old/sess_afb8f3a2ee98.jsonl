@@ -1,0 +1,21 @@
+{
+  "fingerprint": "e51086102ec4fc67",
+  "trace": {
+    "session_id": "sess_afb8f3a2ee98",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "我要退款，怎么操作？",
+        "agent_response": "您好，办理退票需要验证身份。\n\n请提供您的**订单号**（13 位数字），我将为您核对姓名。",
+        "user_action": "request_refund_ticket",
+        "agent_activity": "request_order_info",
+        "semantic_key": "request_refund_ticket"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T13:36:42.013194Z",
+    "updated_at": "2026-08-19T13:36:42.013197Z",
+    "trace_id": null
+  }
+}

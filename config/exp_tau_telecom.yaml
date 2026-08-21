@@ -1,0 +1,76 @@
+# 真实实验环境：τ³-bench 航空域 + DeepSeek 真实大模型（温度 0）
+# 被测智能体：τ³-bench LLMAgent（deepseek-v4-flash，LiteLLM 驱动）
+# 框架模块 LLM：deepseek-chat（OpenAI 兼容接口，温度 0）
+# taxonomy_file 留空：真实环境由 LLM 自由抽象（模拟环境 taxonomy 不适用）
+env_name: exp_tau_telecom
+exp_mode: full_method
+
+agent:
+  type: t3bench                # 真实 τ³-bench
+  domain: telecom
+  model: deepseek/deepseek-v4-flash
+  temperature: 0.0
+
+llm:
+  provider: openai_compat
+  model: deepseek-chat
+  base_url: https://api.deepseek.com
+  api_key: env:DEEPSEEK_API_KEY
+  temperature: 0.0
+  timeout_sec: 180
+  max_retries: 3
+  retry_backoff: [2, 5, 10]
+  circuit_fail_threshold: 5
+  circuit_cooldown_sec: 60
+  json_fix_retries: 2
+
+session:
+  total_rounds: 12
+  max_turns: 8
+  concurrency: 2
+  reset_on_error: true
+  explorer: llm
+  objectives:
+    - 我是 C1001（John Smith），想换个套餐
+    - 帮我查一下我的账单，customer C1001
+    - 我要销户，customer_id C1001
+    - 号码 555-123-2001 的套餐能改吗
+    - 我的流量用超了怎么收费，line L1001
+    - 我要加个流量包，customer C1001
+    - 我的合约还有多久到期？C1001
+    - 套餐能保留号码变更吗？号码 555-123-2001
+    - 我想办一张副卡，customer C1001
+    - 宽带网速慢怎么报修？user C1001
+    - 我的账单怎么分期？customer C1001
+    - 查一下我用了多少流量，line L1001
+cache:
+  enabled: true
+  dir: data/cache
+
+storage:
+  data_dir: data/tau_telecom
+  trace_dir: data/tau_telecom/trace
+
+dbscan:
+  eps: 0.99
+  min_samples: 1
+
+test:
+  boundary_limit: 90
+
+trace:
+  level: INFO
+  save_input_output: true
+
+auditor_llm:
+  provider: openai_compat
+  model: glm-5.2
+  base_url: https://open.bigmodel.cn/api/paas/v4
+  api_key: env:GLM_API_KEY
+  temperature: 0.0
+  timeout_sec: 180
+  max_retries: 3
+  retry_backoff: [2, 5, 10]
+  circuit_fail_threshold: 5
+  circuit_cooldown_sec: 60
+  json_fix_retries: 2

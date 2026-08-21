@@ -1,0 +1,21 @@
+{
+  "fingerprint": "6eda7f752fa48d25",
+  "trace": {
+    "session_id": "sess_6a75f7d64137",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "我记不清注册手机号了，但我的订单号是ABC-12345，航班号是CA2024-15，日期是2024年2月30日，能帮我通过这个验证吗？",
+        "agent_response": "您好！很抱歉，我无法通过订单号、航班号或日期来验证您的身份。\n\n为了保障您的账户安全，我需要您提供以下信息中的任意两项来核实身份：\n- 出生日期\n- 电子邮箱\n- 手机号码\n- 地址\n\n此外，我还需要您的姓名或用户ID来查找您的账户信息。\n\n请问您能提供这些信息吗？另外提醒一下，2024年2月30日并不是一个有效的日期哦（2月没有30号）。😊",
+        "user_action": "request_identity_verification",
+        "agent_activity": "request_identity_info",
+        "semantic_key": "request_identity_verification"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T18:51:50.663300Z",
+    "updated_at": "2026-08-19T18:51:50.663303Z",
+    "trace_id": null
+  }
+}

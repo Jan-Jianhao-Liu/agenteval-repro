@@ -1,0 +1,21 @@
+{
+  "fingerprint": "fbc184e640edc026",
+  "trace": {
+    "session_id": "sess_34cd7396b1ca",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "我记不清我的手机号了，但我想查余额，能用别的验证方式吗？",
+        "agent_response": "您好！我可以帮您查询账户余额。为了验证您的身份，我需要先获取一些信息。\n\n请问您能提供您的姓名或用户ID吗？另外，由于您不记得手机号，您可以提供以下任意两项信息来验证身份：\n1. 出生日期\n2. 电子邮箱\n3. 住址\n\n这样我就可以帮您查找账户信息了。",
+        "user_action": "request_balance_alternative_verification",
+        "agent_activity": "request_identity_verification_info",
+        "semantic_key": "request_balance_alternative_verification"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T18:31:59.484602Z",
+    "updated_at": "2026-08-19T18:31:59.484606Z",
+    "trace_id": null
+  }
+}

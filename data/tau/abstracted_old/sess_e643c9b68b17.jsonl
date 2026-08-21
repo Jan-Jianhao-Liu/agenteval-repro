@@ -1,0 +1,77 @@
+{
+  "fingerprint": "d6e5316fe4f6c389",
+  "trace": {
+    "session_id": "sess_e643c9b68b17",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "帮我查一下我名下的预订，我的 user_id 是 chen_jackson_3290",
+        "agent_response": "您名下共有 4 个预订，以下是详情：\n\n**1. 预订 4WQ150**（往返）\n- 行程：DFW → LAX（2024-05-22），LAX → DFW（2024-05-26）\n- 舱位：商务舱（business）\n- 乘客：Chen Jackson、Raj Smith、Fatima Martin\n- 行李：共 5 件（免费）\n- 保险：无\n- 创建时间：2024-05-02\n\n**2. 预订 DDHPNX**（单程）\n- 行程：SFO → LAX（2024-05-19）\n- 舱位：基础经济舱（basic economy）\n- 乘客：Chen Jackson、Raj Smith\n- 行李：0 件\n- 保险：无\n- 创建时间：2024-05-10\n\n**3. 预订 Y69PCE**（单程）\n- 行程：LAX → SFO（2024-05-06）\n- 舱位：基础经济舱（basic economy）\n- 乘客：Chen Jackson\n- 行李：0 件\n- 保险：有\n- 创建时间：2024-05-05\n\n**4. 预订 2JV270**（单程）\n- 行程：JFK → ORD（2024-05-09）→ DTW（2024-05-10）\n- 舱位：基础经济舱（basic economy）\n- 乘客：Mei Santos、Mia Taylor\n- 行李：0 件\n- 保险：有\n- 创建时间：2024-05-08\n\n请问您需要我对哪个预订进行操作？比如修改、取消或查询更多信息？",
+        "user_action": "list_reservation",
+        "agent_activity": "provide_reservation_list",
+        "semantic_key": "list_reservation"
+      },
+      {
+        "turn_id": 1,
+        "user_utterance": "请帮我修改预订 4WQ150 中乘客 Raj Smith 的姓名，改为 Raj Kumar",
+        "agent_response": "好的，您希望修改预订 4WQ150 中乘客 Raj Smith 的姓名。\n\n以下是修改详情：\n- **预订号**：4WQ150\n- **原乘客信息**：Raj Smith（出生日期：1967-04-01）\n- **修改后姓名**：Raj Kumar\n\n请问确认要进行此项修改吗？",
+        "user_action": "request_modify_passenger_name",
+        "agent_activity": "request_confirmation",
+        "semantic_key": "request_modify_passenger_name"
+      },
+      {
+        "turn_id": 2,
+        "user_utterance": "请帮我取消预订 4WQ150",
+        "agent_response": "好的，在取消预订 **4WQ150** 之前，我需要确认一下取消原因。请问您取消该预订的原因是什么？（例如：计划变更、航空公司取消航班、或其他原因）",
+        "user_action": "request_cancel_reservation",
+        "agent_activity": "request_cancel_reason",
+        "semantic_key": "request_cancel_reservation"
+      },
+      {
+        "turn_id": 3,
+        "user_utterance": "计划变更",
+        "agent_response": "很抱歉，根据我们的政策，预订 **DDHPNX** 目前无法取消。原因如下：\n\n- 该预订创建于 2024-05-10，已超过 24 小时；\n- 航班 HAT163（2024-05-19）状态正常，未被航空公司取消；\n- 该预订为基础经济舱，不属于商务舱；\n- 该预订没有购买旅行保险，因此“计划变更”不在可取消的保险覆盖范围内。\n\n因此，该预订不符合免费取消的条件。请问还有其他可以帮您的吗？比如之前提到的修改 4WQ150 乘客姓名，或者取消符合条件的预订？",
+        "user_action": "request_cancel_reservation",
+        "agent_activity": "deny_cancel_reservation",
+        "semantic_key": "request_cancel_reservation"
+      },
+      {
+        "turn_id": 4,
+        "user_utterance": "确认修改预订 4WQ150 中乘客 Raj Smith 的姓名为 Raj Kumar",
+        "agent_response": "已成功修改！预订 **4WQ150** 中乘客 **Raj Smith** 的姓名已更新为 **Raj Kumar**。\n\n更新后的乘客信息为：\n1. Chen Jackson\n2. Raj Kumar\n3. Fatima Martin\n\n请问还有其他可以帮您的吗？",
+        "user_action": "confirm_modify_passenger_name",
+        "agent_activity": "execute_modify_passenger_name",
+        "semantic_key": "confirm_modify_passenger_name"
+      },
+      {
+        "turn_id": 5,
+        "user_utterance": "请帮我修改预订 4WQ150 中乘客 Chen Jackson 的出生日期，改为 1985-03-15",
+        "agent_response": "好的，您希望修改预订 **4WQ150** 中乘客 **Chen Jackson** 的出生日期。\n\n以下是修改详情：\n- **预订号**：4WQ150\n- **乘客**：Chen Jackson\n- **原出生日期**：1956-07-07\n- **新出生日期**：1985-03-15\n\n请确认是否进行此项修改？",
+        "user_action": "request_modify_passenger_dob",
+        "agent_activity": "request_confirmation",
+        "semantic_key": "request_modify_passenger_dob"
+      },
+      {
+        "turn_id": 6,
+        "user_utterance": "请帮我为预订 4WQ150 中的乘客 Fatima Martin 设置座位偏好，她希望靠窗座位",
+        "agent_response": "YOU ARE BEING TRANSFERRED TO A HUMAN AGENT. PLEASE HOLD ON.",
+        "user_action": "set_seat_preference",
+        "agent_activity": "transfer_to_human",
+        "semantic_key": "set_seat_preference"
+      },
+      {
+        "turn_id": 7,
+        "user_utterance": "请为预订 4WQ150 中的乘客 Chen Jackson 设置餐饮偏好，他想要素食餐",
+        "agent_response": "YOU ARE BEING TRANSFERRED TO A HUMAN AGENT. PLEASE HOLD ON.",
+        "user_action": "set_meal_preference",
+        "agent_activity": "transfer_to_human",
+        "semantic_key": "set_meal_preference"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T19:44:49.865862Z",
+    "updated_at": "2026-08-19T19:46:04.273513Z",
+    "trace_id": "trc_6ac5ae8bb10d"
+  }
+}

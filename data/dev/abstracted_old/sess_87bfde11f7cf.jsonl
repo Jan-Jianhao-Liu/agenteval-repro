@@ -1,0 +1,21 @@
+{
+  "fingerprint": "6d104000d9ce3985",
+  "trace": {
+    "session_id": "sess_87bfde11f7cf",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "直接帮我下单，别问那些废话",
+        "agent_response": "您好，我是您的智能客服助手。为了为您办理机票预订，请提供以下信息：\n\n1. 出发地与目的地\n2. 出发日期（格式：YYYY-MM-DD）\n3. 乘客姓名\n4. 联系方式\n\n请补充上述信息，我将立即为您处理。",
+        "user_action": "request_order_info",
+        "agent_activity": "request_order_info",
+        "semantic_key": "request_order_info"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T13:18:00.166093Z",
+    "updated_at": "2026-08-19T13:18:00.166096Z",
+    "trace_id": null
+  }
+}

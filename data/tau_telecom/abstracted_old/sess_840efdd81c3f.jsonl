@@ -1,0 +1,77 @@
+{
+  "fingerprint": "83430e3bba8df0b8",
+  "trace": {
+    "session_id": "sess_840efdd81c3f",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "我的流量用超了怎么收费，line L1001",
+        "agent_response": "您好！我需要先确认您的身份信息才能为您查询。请问您能提供一下您的电话号码、客户ID，或者您的姓名和出生日期吗？",
+        "user_action": "request_charge_info",
+        "agent_activity": "request_identity_info",
+        "semantic_key": "request_charge_info"
+      },
+      {
+        "turn_id": 1,
+        "user_utterance": "我的电话号码是13800138000，请帮我查一下流量超套怎么收费",
+        "agent_response": "I couldn't find the phone number 13800138000 in our system. \n\nOn your account (C1001), the phone numbers associated are:\n- 555-123-2001\n- 555-123-2002\n- 555-123-2003\n\nCould you please confirm which line you'd like to check the data overage charges for? Or double-check the phone number?",
+        "user_action": "request_data_overage_charge",
+        "agent_activity": "request_phone_confirmation",
+        "semantic_key": "request_data_overage_charge"
+      },
+      {
+        "turn_id": 2,
+        "user_utterance": "那请用555-123-2001帮我查一下流量超套怎么收费",
+        "agent_response": "Let me check the details for your line 555-123-2001:\n\n**Line: 555-123-2001 (L1001)**\n- Plan: Basic Plan (P1001)\n- Data usage this cycle: 3.2 GB\n- Data limit: 5 GB\n- Data refueling price: $5.00 per GB\n\nYour line has used **3.2 GB out of a 5 GB limit**, so it has **not** exceeded the data limit yet. \n\nIf you do exceed your limit and lose data connectivity, you can add more data (\"refuel\") at **$5.00 per GB**, up to a maximum of 2 GB at a time.\n\nWould you like to add a data refuel package to this line, or is there anything else I can help you with?",
+        "user_action": "query_data_overage_charge",
+        "agent_activity": "provide_data_usage_info",
+        "semantic_key": "query_data_overage_charge"
+      },
+      {
+        "turn_id": 3,
+        "user_utterance": "请帮我查一下555-123-2001这个号码的本月账单明细",
+        "agent_response": "Here are the bill details for your account (C1001) for the current billing period:\n\n**February Bill (B1002)**\n- Billing period: 2025-02-01 to 2025-02-28\n- Issue date: 2025-02-05\n- Total amount due: **$150.00**\n- Due date: 2025-02-19\n- Status: **Issued**\n\n**Line items for line 555-123-2001:**\n- Basic Plan - Line 555-123-2001: **$40.00**\n\nThe full bill also includes charges for your other lines:\n- Premium Plan - Line 555-123-2002: $65.00\n- Basic Plan - Line 555-123-2003: $40.00\n- Suspension Fee - Line 555-123-2003: $5.00\n\nIs there anything else I can help you with?",
+        "user_action": "query_bill_detail",
+        "agent_activity": "provide_bill_detail",
+        "semantic_key": "query_bill_detail"
+      },
+      {
+        "turn_id": 4,
+        "user_utterance": "请帮我查一下555-123-2002这个号码的流量使用情况",
+        "agent_response": "以下是线路 **555-123-2002**（L1002）的流量使用情况：\n\n- **套餐**：Premium Plan（P1002）\n- **本月已用流量**：8.7 GB\n- **套餐流量上限**：15 GB\n- **数据加油价格**：$2.00/GB\n- **本周期结束日期**：2025-02-28\n\n目前该号码已使用 8.7 GB，未超过 15 GB 的流量上限。请问还有什么可以帮您的吗？",
+        "user_action": "query_data_usage",
+        "agent_activity": "provide_data_usage",
+        "semantic_key": "query_data_usage"
+      },
+      {
+        "turn_id": 5,
+        "user_utterance": "请帮我查一下555-123-2003这个号码的流量使用情况",
+        "agent_response": "以下是线路 **555-123-2003**（L1003）的流量使用情况：\n\n- **套餐**：Basic Plan（P1001）\n- **本月已用流量**：0.0 GB\n- **套餐流量上限**：5 GB\n- **数据加油价格**：$5.00/GB\n- **本周期结束日期**：2025-02-28\n\n另外提醒您，该线路目前处于**暂停（Suspended）**状态。请问还有什么可以帮您的吗？",
+        "user_action": "query_data_usage",
+        "agent_activity": "provide_data_usage",
+        "semantic_key": "query_data_usage"
+      },
+      {
+        "turn_id": 6,
+        "user_utterance": "请帮我查一下555-123-2003这个号码的本月账单明细",
+        "agent_response": "以下是线路 **555-123-2003** 在二月份账单（B1002）中的明细：\n\n**二月账单（B1002）**\n- 账期：2025-02-01 至 2025-02-28\n- 出账日期：2025-02-05\n- 到期日：2025-02-19\n- 账单状态：**Issued（已出账）**\n\n**555-123-2003 相关费用：**\n- Basic Plan - Line 555-123-2003：**$40.00**\n- Suspension Fee - Line 555-123-2003：**$5.00**\n\n该线路在二月账单中的费用合计为 **$45.00**（整张账单总金额为 $150.00，包含其他线路费用）。\n\n请问还有什么可以帮您的吗？",
+        "user_action": "query_bill_detail",
+        "agent_activity": "provide_bill_detail",
+        "semantic_key": "query_bill_detail"
+      },
+      {
+        "turn_id": 7,
+        "user_utterance": "请帮我支付555-123-2002这个号码的本月账单",
+        "agent_response": "我查了一下，您账户（C1001）的本月账单情况如下：\n\n**二月账单（B1002）**\n- 总金额：**$150.00**\n- 状态：**Issued（已出账）**，并非逾期状态\n- 到期日：2025-02-19\n\n需要说明的是：\n1. 账单是按整个账户出账的，不是按单个号码分开的。这张账单包含三个号码的费用（555-123-2001 的 $40、555-123-2002 的 $65、555-123-2003 的 $40 + $5 暂停费）。\n2. 根据我们的政策，我只能协助支付**逾期（Overdue）**状态的账单。目前这张二月账单状态为 Issued（已出账），并非逾期，所以暂时无法为您发起支付。\n\n请问还有什么可以帮您的吗？",
+        "user_action": "request_pay_bill",
+        "agent_activity": "reject_payment_not_overdue",
+        "semantic_key": "request_pay_bill"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T17:57:36.490668Z",
+    "updated_at": "2026-08-19T17:58:39.429283Z",
+    "trace_id": "trc_a523fc5a78c9"
+  }
+}

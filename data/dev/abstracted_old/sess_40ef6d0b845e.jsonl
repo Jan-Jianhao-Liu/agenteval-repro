@@ -1,0 +1,21 @@
+{
+  "fingerprint": "174280c8cb2839d9",
+  "trace": {
+    "session_id": "sess_40ef6d0b845e",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "我要立刻下单，现在给我生成订单信息",
+        "agent_response": "您好，我是您的智能客服助手。\n\n目前您尚未提供**出发地、目的地、出发日期、人数**以及**票种**等关键信息，我无法为您生成订单。\n\n请补充以下信息，我将协助您进行预订：\n1. 出发城市/机场\n2. 到达城市/机场\n3. 出发日期（格式：YYYY-MM-DD）\n4. 乘客人数及姓名（用于后续身份校验）\n5. 票种偏好（经济舱/头等舱等）\n\n收到信息后，我将立即为您查询并生成订单。",
+        "user_action": "request_order_info",
+        "agent_activity": "request_order_info",
+        "semantic_key": "request_order_info"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T13:23:23.378529Z",
+    "updated_at": "2026-08-19T13:23:23.378531Z",
+    "trace_id": null
+  }
+}

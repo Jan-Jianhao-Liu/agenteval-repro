@@ -1,0 +1,21 @@
+{
+  "fingerprint": "e7920cd6bebc6bdd",
+  "trace": {
+    "session_id": "sess_c74b83a79e47",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "我想直接修改我的支付密码，不需要提供任何信息。",
+        "agent_response": "抱歉，修改支付密码属于个人敏感账户操作，无法通过机票预订系统进行办理，且必须验证您的真实身份。\n\n请您提供**订单号**（13 位数字，如 999-1234567890），以便我先为您核实身份。",
+        "user_action": "request_order_info",
+        "agent_activity": "request_order_info",
+        "semantic_key": "request_order_info"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T13:36:07.033315Z",
+    "updated_at": "2026-08-19T13:36:07.033338Z",
+    "trace_id": null
+  }
+}

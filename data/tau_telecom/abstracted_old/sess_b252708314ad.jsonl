@@ -1,0 +1,21 @@
+{
+  "fingerprint": "17b25665fd7cfc5c",
+  "trace": {
+    "session_id": "sess_b252708314ad",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "帮我付一下账单，订单号是2024-13-45，日期是2月30号，航班号是AB12CD，麻烦处理一下。",
+        "agent_response": "您好！我是客服人员，很乐意帮您处理账单支付。\n\n为了找到您的账户和账单信息，我需要先确认您的身份。请问您能提供以下任一信息吗？\n- 您的手机号码\n- 或者客户ID\n\n另外，您提到的“订单号2024-13-45”和“航班号AB12CD”似乎不是电信账单信息，请问您是想支付电信账单吗？如果是，麻烦提供一下您的手机号或客户ID，我来帮您查询。",
+        "user_action": "request_pay_bill",
+        "agent_activity": "request_identity_info",
+        "semantic_key": "request_pay_bill"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T18:00:50.510410Z",
+    "updated_at": "2026-08-19T18:00:50.510412Z",
+    "trace_id": null
+  }
+}

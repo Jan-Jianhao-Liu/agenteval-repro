@@ -1,0 +1,21 @@
+{
+  "fingerprint": "7fce1bbb7e1bce15",
+  "trace": {
+    "session_id": "sess_153b7e56cb11",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "我买的特价票可以退，现在要申请退款。",
+        "agent_response": "您好，特价票通常属于不可退票种。\n\n不过，为了准确查询您的订单详情并核实票种，我需要先进行**身份校验**。\n\n烦请提供您的**订单号**（格式示例：999-1234567890），我们将通过订单号核对您的姓名以确认身份。",
+        "user_action": "request_refund_ticket",
+        "agent_activity": "verify_identity",
+        "semantic_key": "request_refund_ticket"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T13:17:43.364949Z",
+    "updated_at": "2026-08-19T13:17:43.364952Z",
+    "trace_id": null
+  }
+}

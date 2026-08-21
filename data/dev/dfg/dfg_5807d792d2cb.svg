@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1650" height="178" viewBox="0 0 1650 178" font-family="Segoe UI, Microsoft YaHei, sans-serif">
+<defs><marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 Z" fill="#8a6d3b"/></marker></defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="50" y="28" font-size="15" fill="#333333" font-weight="bold">DFG 工作流图 · 3 节点 / 5 边 · method=full_method</text>
+<path d="M 1216 30 C 1180 -16, 1320 -16, 1284 30" fill="none" stroke="#b0a088" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="1250" y="-2" font-size="11" fill="#8a6d3b" text-anchor="middle">×8</text>
+<line x1="1250" y1="50" x2="1450" y2="50" stroke="#b0a088" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="1350.0" y="44.0" font-size="11" fill="#8a6d3b" text-anchor="middle">×5</text>
+<line x1="1450" y1="50" x2="1250" y2="50" stroke="#b0a088" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="1350.0" y="44.0" font-size="11" fill="#8a6d3b" text-anchor="middle">×5</text>
+<path d="M 1416 30 C 1380 -16, 1520 -16, 1484 30" fill="none" stroke="#b0a088" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="1450" y="-2" font-size="11" fill="#8a6d3b" text-anchor="middle">×2</text>
+<line x1="50" y1="50" x2="1250" y2="50" stroke="#b0a088" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="650.0" y="44.0" font-size="11" fill="#8a6d3b" text-anchor="middle">×1</text>
+<ellipse cx="1250" cy="50" rx="92" ry="18" fill="#eef2f7" stroke="#5b7a9d" stroke-width="1.6"/>
+<text x="1250" y="48" font-size="12" fill="#1f3b57" text-anchor="middle" font-weight="bold">request_order_info</text>
+<text x="1250" y="63" font-size="10" fill="#7a8699" text-anchor="middle">频次 15</text>
+<ellipse cx="1450" cy="50" rx="92" ry="18" fill="#eef2f7" stroke="#5b7a9d" stroke-width="1.6"/>
+<text x="1450" y="48" font-size="12" fill="#1f3b57" text-anchor="middle" font-weight="bold">request_refund_ticket</text>
+<text x="1450" y="63" font-size="10" fill="#7a8699" text-anchor="middle">频次 8</text>
+<ellipse cx="50" cy="50" rx="92" ry="18" fill="#eef2f7" stroke="#5b7a9d" stroke-width="1.6"/>
+<text x="50" y="48" font-size="12" fill="#1f3b57" text-anchor="middle" font-weight="bold">request_order_by_identity</text>
+<text x="50" y="63" font-size="10" fill="#7a8699" text-anchor="middle">频次 1</text>
+</svg>

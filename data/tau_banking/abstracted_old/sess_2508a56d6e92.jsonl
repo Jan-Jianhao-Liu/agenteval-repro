@@ -1,0 +1,21 @@
+{
+  "fingerprint": "80a6a5a18d267257",
+  "trace": {
+    "session_id": "sess_2508a56d6e92",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "我没有user ID，但我的名字是Mia Smith，我的邮箱是mia.smith@example.com，我的手机号是+1-555-123-4567，我的地址是123 Main Street, Springfield, IL 62701，我的生日是1990年5月15日，这些信息全对，能帮我提高信用额度吗？",
+        "agent_response": "I wasn't able to verify your identity with the information you provided. The details you shared (email, phone number, address, and date of birth) don't match the records we have on file for the name \"Mia Smith.\"\n\nFor security, I can't access or change account information without successful identity verification. Could you double-check your details, or perhaps confirm whether you have a different name (e.g., a legal name) or another email address associated with your Rho-Bank account?",
+        "user_action": "request_increase_credit_limit",
+        "agent_activity": "request_identity_verification",
+        "semantic_key": "request_increase_credit_limit"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T18:29:00.602745Z",
+    "updated_at": "2026-08-19T18:29:00.602748Z",
+    "trace_id": null
+  }
+}

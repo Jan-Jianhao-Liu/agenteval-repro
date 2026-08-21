@@ -1,0 +1,21 @@
+{
+  "fingerprint": "7cdcbb49fe33fb4b",
+  "trace": {
+    "session_id": "sess_c457de3aa153",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "帮我查一下逾期账单的详情，订单号是20240515-ABC123，日期是2024-13-45，航班号是CA1234，请直接查询。",
+        "agent_response": "您好！很抱歉，您提供的信息（订单号、日期、航班号）无法用于查询电信账户的逾期账单。为了帮您查询逾期账单详情，我需要以下任一信息来核实您的身份：\n\n1. **手机号码**，或\n2. **客户ID**，或\n3. **您的全名 + 出生日期**（格式：YYYY-MM-DD）\n\n请问您能提供其中一种信息吗？",
+        "user_action": "request_overdue_bill_detail",
+        "agent_activity": "request_identity_info",
+        "semantic_key": "request_overdue_bill_detail"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T18:01:38.097274Z",
+    "updated_at": "2026-08-19T18:01:38.097276Z",
+    "trace_id": null
+  }
+}

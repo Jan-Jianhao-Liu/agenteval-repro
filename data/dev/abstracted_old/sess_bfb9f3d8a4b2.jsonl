@@ -1,0 +1,21 @@
+{
+  "fingerprint": "4a72d95650fe5f07",
+  "trace": {
+    "session_id": "sess_bfb9f3d8a4b2",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "我要立刻下单，现在给我生成订单信息",
+        "agent_response": "您好！为了帮您生成订单，我需要先了解您的具体需求，请提供以下信息：\n\n1. **出发城市与日期**（格式：YYYY-MM-DD，例如 2023-10-01）\n2. **目的地城市**\n3. **乘客姓名**\n4. **航班号偏好**（如 CA1234，或告知您是否有特定航班选择）\n5. **行李需求**（需携带行李数量及类型）\n6. **特殊服务需求**（如优先登机、特殊餐食等）\n\n请一次性提供上述信息，我将为您生成订单。",
+        "user_action": "request_order_info",
+        "agent_activity": "request_order_info",
+        "semantic_key": "request_order_info"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T13:17:34.712243Z",
+    "updated_at": "2026-08-19T13:17:34.712245Z",
+    "trace_id": null
+  }
+}

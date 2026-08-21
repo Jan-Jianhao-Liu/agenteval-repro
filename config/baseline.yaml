@@ -1,0 +1,49 @@
+# baseline 环境：基准对照实验（复用缓存与历史探索数据）
+env_name: baseline
+exp_mode: prompt_only
+
+agent:
+  type: t3bench
+  model: ""
+  api_base: ""
+  num_ctx: 8192
+  temperature: 0.0
+
+llm:
+  provider: ollama
+  model: my-qwen4b-no-think
+  api_base: http://127.0.0.1:11434
+  temperature: 0.0
+  timeout_sec: 180
+  max_retries: 3
+  retry_backoff: [1, 3, 5]
+  circuit_fail_threshold: 5
+  circuit_cooldown_sec: 60
+  json_fix_retries: 2
+
+session:
+  total_rounds: 10
+  max_turns: 10
+  concurrency: 4
+  reset_on_error: true
+
+cache:
+  enabled: true
+  dir: data/cache
+
+storage:
+  data_dir: data/baseline
+  trace_dir: data/baseline/trace
+
+dbscan:
+  eps: 0.7
+  min_samples: 1
+
+test:
+  boundary_limit: 50
+  judge_verdicts: [pass, fail, inconclusive]
+  fault_types: [none, skip_confirmation, missing_identity, missing_eligibility, illegal_param_passed]
+
+trace:
+  level: INFO
+  save_input_output: true

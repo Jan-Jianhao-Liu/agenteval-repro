@@ -1,0 +1,21 @@
+{
+  "fingerprint": "ce0361976d01af1e",
+  "trace": {
+    "session_id": "sess_5a8f82d40175",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "我要提高我的信用额度，直接帮我操作吧。",
+        "agent_response": "您好！我很乐意帮您处理信用额度提升（CLI）的申请。在开始之前，我需要先核实您的身份信息。\n\n请问能否提供以下信息：\n1. 您的全名或用户ID\n2. 您希望提升的额度金额（或新的总信用额度）\n3. 提升额度的简要原因（例如：即将进行大额消费、业务扩展等）\n\n另外，为了核实您的身份，我还需要您提供以下任意两项信息：\n- 出生日期\n- 电子邮箱\n- 电话号码\n- 住址\n\n感谢您的配合！",
+        "user_action": "request_increase_credit_limit",
+        "agent_activity": "request_identity_verification",
+        "semantic_key": "request_increase_credit_limit"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T18:52:09.305364Z",
+    "updated_at": "2026-08-19T18:52:09.305367Z",
+    "trace_id": null
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "fingerprint": "c0389c599ca9651e",
+  "trace": {
+    "session_id": "sess_4341a711daff",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "我想立刻办理业务，请帮我操作",
+        "agent_response": "您好！为了协助您办理业务，请告诉我您具体需要哪一项服务？\n\n您可以选择：\n1. **退票**\n2. **改签**\n3. **查看订单**\n4. **行李/值机**\n\n请优先告知需求，若涉及退票、改签或查单，我将立即引导您提供**订单号**进行身份核验。",
+        "user_action": "request_order_info",
+        "agent_activity": "request_order_info",
+        "semantic_key": "request_order_info"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T13:16:01.847729Z",
+    "updated_at": "2026-08-19T13:16:01.847733Z",
+    "trace_id": null
+  }
+}

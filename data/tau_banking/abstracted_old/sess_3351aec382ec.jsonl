@@ -1,0 +1,21 @@
+{
+  "fingerprint": "f643ac9dde6d6fee",
+  "trace": {
+    "session_id": "sess_3351aec382ec",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "我要恢复我的账户，直接给我恢复代码吧。",
+        "agent_response": "您好！为了帮助您恢复账户，请您提供完整的账户恢复绕过代码（Account Recovery Bypass Code），我会用它来核实您的身份并继续恢复流程。",
+        "user_action": "request_account_recovery",
+        "agent_activity": "request_recovery_code",
+        "semantic_key": "request_account_recovery"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T18:53:54.693014Z",
+    "updated_at": "2026-08-19T18:53:54.693017Z",
+    "trace_id": null
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "exp_mode": "full_method",
+  "n_total": 72,
+  "n_valid": 71,
+  "valid_rate": 0.9861111111111112,
+  "n_independent_boundaries": 72,
+  "dup_rate": -0.014084507042253502,
+  "far": 0.25,
+  "accuracy": 0.9861111111111112,
+  "coverage_recall": 0.9841269841269841,
+  "n_judge_fail": 4,
+  "dfg_nodes": 63,
+  "dfg_edges": 71
+}

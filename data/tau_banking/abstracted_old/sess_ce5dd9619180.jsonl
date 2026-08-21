@@ -1,0 +1,21 @@
+{
+  "fingerprint": "bd650c0f3c43d486",
+  "trace": {
+    "session_id": "sess_ce5dd9619180",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "我要查我的订单，快点帮我处理一下。",
+        "agent_response": "您好！我是 Rho-Bank 的客服代表，很高兴为您服务。\n\n请问您说的“订单”具体是指什么呢？比如：\n- 信用卡交易记录\n- 推荐（Referral）记录\n- 账户余额信息\n\n另外，为了查询您的信息，我需要先核实您的身份。请提供您的用户 ID 或姓名，以及以下任意两项信息（用于身份验证）：\n- 出生日期\n- 邮箱地址\n- 电话号码\n- 住址\n\n这样我就能尽快帮您处理啦！",
+        "user_action": "request_query_order",
+        "agent_activity": "request_clarification_and_identity",
+        "semantic_key": "request_query_order"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T18:50:33.300896Z",
+    "updated_at": "2026-08-19T18:50:33.300900Z",
+    "trace_id": null
+  }
+}

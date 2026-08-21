@@ -1,0 +1,21 @@
+{
+  "fingerprint": "74c059bd61ed347e",
+  "trace": {
+    "session_id": "sess_6533ca145656",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "我要申请身份验证，直接开始吧。",
+        "agent_response": "您好！很高兴为您服务。为了验证您的身份，我需要先了解一些基本信息。\n\n请问您能提供您的姓名或用户ID吗？另外，为了完成身份验证，我还需要您提供以下任意两项信息：\n- 出生日期\n- 电子邮箱\n- 电话号码\n- 住址\n\n请您提供这些信息，我将为您进行身份验证。",
+        "user_action": "request_identity_verification",
+        "agent_activity": "request_identity_info",
+        "semantic_key": "request_identity_verification"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T18:50:02.911972Z",
+    "updated_at": "2026-08-19T18:50:02.911975Z",
+    "trace_id": null
+  }
+}

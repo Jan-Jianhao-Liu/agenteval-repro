@@ -1,0 +1,21 @@
+{
+  "fingerprint": "e73c25811efc5f1f",
+  "trace": {
+    "session_id": "sess_dd90293d34da",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "我没有user ID，但我的名字是Mia Smith，邮箱是mia.smith@example.com，手机是+1-555-123-4567，这些信息够了吗？",
+        "agent_response": "您好，Mia！感谢您提供这些信息。请问您需要什么帮助呢？了解您的具体需求后，我才能为您提供相应的支持。",
+        "user_action": "provide_identity_info",
+        "agent_activity": "request_user_need",
+        "semantic_key": "provide_identity_info"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T18:29:49.188116Z",
+    "updated_at": "2026-08-19T18:29:49.188122Z",
+    "trace_id": null
+  }
+}

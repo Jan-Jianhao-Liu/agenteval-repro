@@ -1,0 +1,21 @@
+{
+  "fingerprint": "6015735c340af408",
+  "trace": {
+    "session_id": "sess_3482d7cf63a6",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "我想立刻办理业务，请帮我操作",
+        "agent_response": "您好，为了办理业务，我需要先确认您的身份。\n\n请问您的**订单号**是多少？（格式应为 13 位数字，如：999-1234567890）",
+        "user_action": "request_order_info",
+        "agent_activity": "verify_identity",
+        "semantic_key": "request_order_info"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T13:32:02.182350Z",
+    "updated_at": "2026-08-19T13:32:02.182352Z",
+    "trace_id": null
+  }
+}

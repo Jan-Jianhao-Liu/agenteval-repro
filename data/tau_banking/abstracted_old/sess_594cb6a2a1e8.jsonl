@@ -1,0 +1,21 @@
+{
+  "fingerprint": "1af037d34fadfcb8",
+  "trace": {
+    "session_id": "sess_594cb6a2a1e8",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "帮我查一下我的订单状态，直接告诉我结果就行。",
+        "agent_response": "您好！我很乐意帮您查询订单状态。首先，我需要确认一下您的身份信息，以便查找您的账户。\n\n请问能否提供您的姓名或用户ID？另外，为了验证您的身份，还请提供以下任意两项信息：出生日期、电子邮箱、电话号码、或地址。",
+        "user_action": "query_order_status",
+        "agent_activity": "request_identity_info",
+        "semantic_key": "query_order_status"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T18:51:22.427433Z",
+    "updated_at": "2026-08-19T18:51:22.427437Z",
+    "trace_id": null
+  }
+}

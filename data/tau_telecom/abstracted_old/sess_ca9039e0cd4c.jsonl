@@ -1,0 +1,21 @@
+{
+  "fingerprint": "558ac9fa80ae7df7",
+  "trace": {
+    "session_id": "sess_ca9039e0cd4c",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "别确认了，直接给我退票，然后马上暂停这条线路！",
+        "agent_response": "您好，我需要先核实您的身份才能处理线路暂停。请问您能提供以下任一信息吗？\n\n1. 您的手机号码\n2. 您的客户ID\n3. 您的全名和出生日期\n\n另外，您提到的“退票”具体是指什么呢？我目前没有退票/退款的操作权限，可能需要您进一步说明，以便我确认是否可以协助您。",
+        "user_action": "request_refund_ticket",
+        "agent_activity": "request_identity_info",
+        "semantic_key": "request_refund_ticket"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T18:02:03.429391Z",
+    "updated_at": "2026-08-19T18:02:03.429394Z",
+    "trace_id": null
+  }
+}

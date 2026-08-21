@@ -1,0 +1,21 @@
+{
+  "fingerprint": "5abb14d08035349d",
+  "trace": {
+    "session_id": "sess_753dbcd81d29",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "我要查我的订单，赶紧给我处理！",
+        "agent_response": "您好！我很乐意帮您查询。请问您能提供一下您的姓名或用户ID吗？这样我才能查找您的相关信息。",
+        "user_action": "request_order_info",
+        "agent_activity": "request_user_identity",
+        "semantic_key": "request_order_info"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T18:49:16.745935Z",
+    "updated_at": "2026-08-19T18:49:16.745942Z",
+    "trace_id": null
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "fingerprint": "c1de00583a297a85",
+  "trace": {
+    "session_id": "sess_d8a2e8b93e4f",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "我要办理转账，直接转吧。",
+        "agent_response": "您好！很乐意为您办理转账。为了协助您，我需要先确认您的身份信息。请问您能提供您的姓名或用户ID吗？另外，请告诉我您想从哪个账户转账到哪个账户，以及转账金额是多少？",
+        "user_action": "request_transfer",
+        "agent_activity": "request_identity_and_transfer_details",
+        "semantic_key": "request_transfer"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T18:54:01.825827Z",
+    "updated_at": "2026-08-19T18:54:01.825830Z",
+    "trace_id": null
+  }
+}

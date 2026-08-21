@@ -1,0 +1,21 @@
+{
+  "fingerprint": "9a0eb625e5129c62",
+  "trace": {
+    "session_id": "sess_58caccefe226",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "我的订单号是AB123456789，日期是2023-13-45，航班号是XX8888，请帮我换一种验证方式。",
+        "agent_response": "您好！我是Rho-Bank的客服代表。很抱歉，您提供的订单号（AB123456789）、日期（2023-13-45）和航班号（XX8888）不属于我们银行的身份验证信息。\n\n为了访问或修改您的账户信息，我需要通过标准方式验证您的身份。请您提供以下信息中的任意两项：\n\n1. 出生日期\n2. 电子邮箱\n3. 手机号码\n4. 住址\n\n另外，请告诉我您的姓名或用户ID，以便我为您查找账户信息。请问您能提供这些信息吗？",
+        "user_action": "request_alternative_verification",
+        "agent_activity": "request_identity_info",
+        "semantic_key": "request_alternative_verification"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T18:52:21.018020Z",
+    "updated_at": "2026-08-19T18:52:21.018025Z",
+    "trace_id": null
+  }
+}

@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="8050" height="256" viewBox="0 0 8050 256" font-family="Segoe UI, Microsoft YaHei, sans-serif">
+<defs><marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 Z" fill="#8a6d3b"/></marker></defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="50" y="28" font-size="15" fill="#333333" font-weight="bold">DFG 工作流图 · 7 节点 / 32 边 · method=full_method</text>
+<line x1="7050" y1="50" x2="7250" y2="50" stroke="#b0a088" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="7150.0" y="44.0" font-size="11" fill="#8a6d3b" text-anchor="middle">×3</text>
+<line x1="7050" y1="50" x2="7650" y2="50" stroke="#b0a088" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="7350.0" y="44.0" font-size="11" fill="#8a6d3b" text-anchor="middle">×7</text>
+<line x1="7050" y1="50" x2="7450" y2="50" stroke="#b0a088" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="7250.0" y="44.0" font-size="11" fill="#8a6d3b" text-anchor="middle">×5</text>
+<line x1="7050" y1="50" x2="7250" y2="128" stroke="#b0a088" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="7150.0" y="83.0" font-size="11" fill="#8a6d3b" text-anchor="middle">×3</text>
+<line x1="7050" y1="50" x2="7850" y2="50" stroke="#b0a088" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="7450.0" y="44.0" font-size="11" fill="#8a6d3b" text-anchor="middle">×1</text>
+<path d="M 7016 30 C 6980 -16, 7120 -16, 7084 30" fill="none" stroke="#b0a088" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="7050" y="-2" font-size="11" fill="#8a6d3b" text-anchor="middle">×8</text>
+<line x1="7250" y1="50" x2="7450" y2="50" stroke="#b0a088" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="7350.0" y="44.0" font-size="11" fill="#8a6d3b" text-anchor="middle">×3</text>
+<path d="M 7216 30 C 7180 -16, 7320 -16, 7284 30" fill="none" stroke="#b0a088" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="7250" y="-2" font-size="11" fill="#8a6d3b" text-anchor="middle">×4</text>
+<line x1="7250" y1="50" x2="7850" y2="50" stroke="#b0a088" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="7550.0" y="44.0" font-size="11" fill="#8a6d3b" text-anchor="middle">×1</text>
+<line x1="7250" y1="50" x2="7650" y2="50" stroke="#b0a088" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="7450.0" y="44.0" font-size="11" fill="#8a6d3b" text-anchor="middle">×2</text>
+<line x1="7250" y1="50" x2="7050" y2="50" stroke="#b0a088" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="7150.0" y="44.0" font-size="11" fill="#8a6d3b" text-anchor="middle">×2</text>
+<line x1="7450" y1="50" x2="7050" y2="50" stroke="#b0a088" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="7250.0" y="44.0" font-size="11" fill="#8a6d3b" text-anchor="middle">×5</text>
+<line x1="7450" y1="50" x2="7850" y2="128" stroke="#b0a088" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="7650.0" y="83.0" font-size="11" fill="#8a6d3b" text-anchor="middle">×1</text>
+<line x1="7450" y1="50" x2="7250" y2="50" stroke="#b0a088" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="7350.0" y="44.0" font-size="11" fill="#8a6d3b" text-anchor="middle">×2</text>
+<path d="M 7416 30 C 7380 -16, 7520 -16, 7484 30" fill="none" stroke="#b0a088" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="7450" y="-2" font-size="11" fill="#8a6d3b" text-anchor="middle">×4</text>
+<line x1="7450" y1="50" x2="7650" y2="50" stroke="#b0a088" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="7550.0" y="44.0" font-size="11" fill="#8a6d3b" text-anchor="middle">×1</text>
+<line x1="7450" y1="50" x2="7850" y2="50" stroke="#b0a088" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="7650.0" y="44.0" font-size="11" fill="#8a6d3b" text-anchor="middle">×1</text>
+<line x1="7650" y1="50" x2="7250" y2="50" stroke="#b0a088" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="7450.0" y="44.0" font-size="11" fill="#8a6d3b" text-anchor="middle">×3</text>
+<line x1="7650" y1="50" x2="7050" y2="50" stroke="#b0a088" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="7350.0" y="44.0" font-size="11" fill="#8a6d3b" text-anchor="middle">×4</text>
+<path d="M 7616 30 C 7580 -16, 7720 -16, 7684 30" fill="none" stroke="#b0a088" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="7650" y="-2" font-size="11" fill="#8a6d3b" text-anchor="middle">×7</text>
+<line x1="7650" y1="50" x2="7450" y2="50" stroke="#b0a088" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="7550.0" y="44.0" font-size="11" fill="#8a6d3b" text-anchor="middle">×2</text>
+<line x1="7650" y1="50" x2="7850" y2="128" stroke="#b0a088" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="7750.0" y="83.0" font-size="11" fill="#8a6d3b" text-anchor="middle">×1</text>
+<line x1="7650" y1="50" x2="7850" y2="50" stroke="#b0a088" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="7750.0" y="44.0" font-size="11" fill="#8a6d3b" text-anchor="middle">×1</text>
+<path d="M 7816 30 C 7780 -16, 7920 -16, 7884 30" fill="none" stroke="#b0a088" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="7850" y="-2" font-size="11" fill="#8a6d3b" text-anchor="middle">×5</text>
+<line x1="7850" y1="50" x2="7050" y2="50" stroke="#b0a088" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="7450.0" y="44.0" font-size="11" fill="#8a6d3b" text-anchor="middle">×2</text>
+<line x1="7850" y1="50" x2="7450" y2="50" stroke="#b0a088" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="7650.0" y="44.0" font-size="11" fill="#8a6d3b" text-anchor="middle">×1</text>
+<line x1="7850" y1="128" x2="7250" y2="50" stroke="#b0a088" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="7550.0" y="83.0" font-size="11" fill="#8a6d3b" text-anchor="middle">×1</text>
+<line x1="7850" y1="128" x2="7650" y2="50" stroke="#b0a088" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="7750.0" y="83.0" font-size="11" fill="#8a6d3b" text-anchor="middle">×1</text>
+<line x1="7250" y1="128" x2="7050" y2="50" stroke="#b0a088" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="7150.0" y="83.0" font-size="11" fill="#8a6d3b" text-anchor="middle">×3</text>
+<line x1="7250" y1="128" x2="7450" y2="50" stroke="#b0a088" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="7350.0" y="83.0" font-size="11" fill="#8a6d3b" text-anchor="middle">×1</text>
+<path d="M 7216 108 C 7180 62, 7320 62, 7284 108" fill="none" stroke="#b0a088" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="7250" y="76" font-size="11" fill="#8a6d3b" text-anchor="middle">×4</text>
+<line x1="7250" y1="128" x2="7650" y2="50" stroke="#b0a088" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="7450.0" y="83.0" font-size="11" fill="#8a6d3b" text-anchor="middle">×1</text>
+<ellipse cx="7050" cy="50" rx="92" ry="18" fill="#eef2f7" stroke="#5b7a9d" stroke-width="1.6"/>
+<text x="7050" y="48" font-size="12" fill="#1f3b57" text-anchor="middle" font-weight="bold">request_order_info</text>
+<text x="7050" y="63" font-size="10" fill="#7a8699" text-anchor="middle">频次 30</text>
+<ellipse cx="7250" cy="50" rx="92" ry="18" fill="#eef2f7" stroke="#5b7a9d" stroke-width="1.6"/>
+<text x="7250" y="48" font-size="12" fill="#1f3b57" text-anchor="middle" font-weight="bold">provide_identity</text>
+<text x="7250" y="63" font-size="10" fill="#7a8699" text-anchor="middle">频次 13</text>
+<ellipse cx="7450" cy="50" rx="92" ry="18" fill="#eef2f7" stroke="#5b7a9d" stroke-width="1.6"/>
+<text x="7450" y="48" font-size="12" fill="#1f3b57" text-anchor="middle" font-weight="bold">request_identity_info</text>
+<text x="7450" y="63" font-size="10" fill="#7a8699" text-anchor="middle">频次 16</text>
+<ellipse cx="7650" cy="50" rx="92" ry="18" fill="#eef2f7" stroke="#5b7a9d" stroke-width="1.6"/>
+<text x="7650" y="48" font-size="12" fill="#1f3b57" text-anchor="middle" font-weight="bold">provide_order_info</text>
+<text x="7650" y="63" font-size="10" fill="#7a8699" text-anchor="middle">频次 20</text>
+<ellipse cx="7850" cy="50" rx="92" ry="18" fill="#eef2f7" stroke="#5b7a9d" stroke-width="1.6"/>
+<text x="7850" y="48" font-size="12" fill="#1f3b57" text-anchor="middle" font-weight="bold">request_order_by_identity</text>
+<text x="7850" y="63" font-size="10" fill="#7a8699" text-anchor="middle">频次 10</text>
+<ellipse cx="7850" cy="128" rx="92" ry="18" fill="#eef2f7" stroke="#5b7a9d" stroke-width="1.6"/>
+<text x="7850" y="126" font-size="12" fill="#1f3b57" text-anchor="middle" font-weight="bold">provide_invalid_order</text>
+<text x="7850" y="141" font-size="10" fill="#7a8699" text-anchor="middle">频次 2</text>
+<ellipse cx="7250" cy="128" rx="92" ry="18" fill="#eef2f7" stroke="#5b7a9d" stroke-width="1.6"/>
+<text x="7250" y="126" font-size="12" fill="#1f3b57" text-anchor="middle" font-weight="bold">request_refund_ticket</text>
+<text x="7250" y="141" font-size="10" fill="#7a8699" text-anchor="middle">频次 9</text>
+</svg>

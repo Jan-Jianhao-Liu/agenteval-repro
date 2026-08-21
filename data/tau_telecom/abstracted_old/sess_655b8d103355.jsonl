@@ -1,0 +1,21 @@
+{
+  "fingerprint": "41c9b0304b3bea88",
+  "trace": {
+    "session_id": "sess_655b8d103355",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "帮我查一下上个月的账单明细，订单号是2024-13-45。",
+        "agent_response": "您好！请问您能提供一下您的手机号码或客户ID吗？这样我可以帮您查询账单信息。另外，您提到的“订单号 2024-13-45”是否可以确认一下是哪张账单的编号呢？",
+        "user_action": "request_bill_detail",
+        "agent_activity": "request_customer_identity",
+        "semantic_key": "request_bill_detail"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T18:02:42.618439Z",
+    "updated_at": "2026-08-19T18:02:42.618441Z",
+    "trace_id": null
+  }
+}

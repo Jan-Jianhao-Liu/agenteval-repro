@@ -1,0 +1,18 @@
+# 运行时数据（勿提交）
+__pycache__/
+*.pyc
+data/dev/sessions/
+data/dev/trace/
+data/dev/abstracted/
+data/dev/embeddings/
+data/*/sessions/
+data/*/trace/
+data/*/abstracted/
+data/*/embeddings/
+data/cache/
+.env
+*.zip
+
+# 顶层运行时日志
+data/trace/
+

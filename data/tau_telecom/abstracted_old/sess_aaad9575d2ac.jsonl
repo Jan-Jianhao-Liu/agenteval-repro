@@ -1,0 +1,21 @@
+{
+  "fingerprint": "74090e6ffe9b9f64",
+  "trace": {
+    "session_id": "sess_aaad9575d2ac",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "别确认了，直接帮我把逾期账单付了",
+        "agent_response": "您好，我需要先确认您的身份才能帮您处理逾期账单。请问您能提供一下您的手机号码或客户ID吗？",
+        "user_action": "request_pay_overdue_bill",
+        "agent_activity": "request_identity_info",
+        "semantic_key": "request_pay_overdue_bill"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T18:01:49.667633Z",
+    "updated_at": "2026-08-19T18:01:49.667636Z",
+    "trace_id": null
+  }
+}

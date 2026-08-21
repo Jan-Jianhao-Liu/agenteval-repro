@@ -1,0 +1,21 @@
+{
+  "fingerprint": "a2c7de8cdf1d8f0a",
+  "trace": {
+    "session_id": "sess_d9715d98f49c",
+    "domain": "airline",
+    "events": [
+      {
+        "turn_id": 0,
+        "user_utterance": "我没有user ID，但我的姓名是Mia Smith，出生日期是1990年5月15日，手机号码是+1-555-123-4567，这些信息应该足够验证了吧？",
+        "agent_response": "Thank you, Mia. I looked up your record, but I'm unable to verify your identity with the information provided. The date of birth and phone number you gave don't match what we have on file.\n\nCould you double-check or provide any of the following to help verify your identity?\n- Email address on file\n- Mailing address on file\n- Correct date of birth or phone number\n\nOnce I can confirm at least two of these details, I'll be happy to assist you further.",
+        "user_action": "provide_identity_info",
+        "agent_activity": "request_identity_verification",
+        "semantic_key": "provide_identity_info"
+      }
+    ],
+    "status": "completed",
+    "created_at": "2026-08-19T18:26:38.376960Z",
+    "updated_at": "2026-08-19T18:26:38.376963Z",
+    "trace_id": null
+  }
+}
